@@ -113,7 +113,12 @@ body{
     padding: 1rem 2rem;
     border-radius: 6px;
     border: 2px solid crimson;
+    /* margin: auto; */
     /* text-align: justify; */
+}
+
+#resume{
+    text-align: center;
 }
 
 button {
@@ -126,4 +131,12 @@ button {
     color: crimson;
     border: 2px solid crimson;
 
+}
+
+#my-skills{
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #9e9b9b29;
 }
