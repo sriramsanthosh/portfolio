@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+    /* user-select: none; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.horizontal-list{
+    padding-left: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.horizontal-list-item{
+    display: inline-block;
+    margin: 0px 1rem 0px 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.nav-links{
+    color: white;
+    text-decoration: none;
+}
+
+#header-image{
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url('images/macbook_mouse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.name-social-plate{
+    margin-top: 25vh;
+}
+
+#my-name{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a{
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+}
+
