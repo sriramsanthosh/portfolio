@@ -1,13 +1,16 @@
 body{
     margin: 0px;
-    /* user-select: none; */
+    user-select: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
 }
 
+/* =============================== Header Section ================================== */
+
 .text-center{
     text-align: center;
 }
+
 
 .horizontal-list{
     padding-left: 0px;
@@ -46,6 +49,7 @@ body{
     color: white;
     font-family: sans-serif;
     margin-bottom: 0.5rem;
+    width: auto;
 }
 
 .social-icons a{
@@ -54,3 +58,72 @@ body{
     color: white;
 }
 
+.social-icons:hover{
+    border-radius: 50%;
+
+}
+
+/* .social-icons a:hover{
+    border-radius: 50%;
+} */
+
+/*================================== About Section  =============================*/
+
+#about{
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#dp-container{
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -16vh;
+}
+
+.dp{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 2px white;
+}
+
+
+.dp:hover{
+    cursor: pointer;
+}
+
+#about-text{
+    padding: 1rem;
+    width: 70%;
+    text-align: justify;
+    color: grey;
+    line-height: 28px;
+    font-size: 1.1rem;
+    margin: auto;
+}
+
+#download-button{
+    background-color: crimson;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    /* text-align: justify; */
+}
+
+button {
+    transition-duration: 0.4s;
+}
+
+#download-button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: crimson;
+    border: 2px solid crimson;
+
+}

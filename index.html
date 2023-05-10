@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,32 +10,60 @@
     <script src="https://kit.fontawesome.com/0d3ce04075.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
+    <header id = "#home">
         <div id="header-image">
-            <nav>
+            <nav id="nav-bar">
                 <ul class="horizontal-list text-center">
-                    <li class="horizontal-list-item"><a class="nav-links" href="">Home</a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="">About</a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="">Education</a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="">Projects</a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="">Skills</a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="">PortFolio</a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="">Contact</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#">Home</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#about">About</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#education">Education</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#projects">Projects</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#skills">Skills</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#portfolio">PortFolio</a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            
+
             <div class="name-social-plate text-center">
-            <h1 id="my-name">Sriram Santhosh Itha</h1>
+                <h1 id="my-name">Sriram Santhosh Itha</h1>
                 <ul class="horizontal-list text-center">
-                    <li class="horizontal-list-item social-icons"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li class="horizontal-list-item social-icons"><a href=""><i class="fa-brands fa-github"></i></a></li>
-                    <li class="horizontal-list-item social-icons"><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="horizontal-list-item social-icons"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="horizontal-list-item social-icons"><a href="tel:+917815980132"><i class="fa-solid fa-phone"></i></a></li>
+                    <li class="horizontal-list-item social-icons"><a href="mailto:sriramsanthosh80@gmail.com"><i class="fa-sharp fa-regular fa-envelope"></i></a></li>
+                    <li class="horizontal-list-item social-icons"><a href="https://www.linkedin.com/in/sriramsanthosh/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li class="horizontal-list-item social-icons"><a href="https://github.com/sriramsanthosh"><i class="fa-brands fa-github"></i></a></li>
+                    <li class="horizontal-list-item social-icons"><a href="https://twitter.com/sriramsanthosh_"><i class="fa-brands fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
     </header>
-    
+
+    <main>
+        <section id="about">
+            <div id="dp-container">
+                <img class="dp text-center" src="images/Sriram.jpg" alt="Sriram-dp">
+            </div>
+            <div class="about">
+                <div id="about-text">
+                    I'm final year student at NIT Agartala (2020-24).
+                    I am a coding enthusiast, self-motivated, and a hard worker seeking an opportunity to work in a
+                    challenging
+                    environment to improve and acquire skills. Skilled multitasker with superior work ethic and good
+                    teamwork,
+                    problem-solving and organizational skills. Willing to take on any task to help team. Reliable and
+                    dedicated team
+                    player with hardworking and resourceful approach.
+                    <br><br>
+                    Get to know more about me by downloading my resume given below <br><br>
+                    <button id="download-button" type="submit">Download Resume</button>
+                </div>
+            </div>
+            
+        </section>
+        
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
