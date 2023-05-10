@@ -135,7 +135,7 @@ button {
 
 /*=========================================================== Skills Section ======================================================================= */
 
-#my-skills{
+#skills{
     height: auto;
     width: 100%;
     position: relative;
@@ -155,4 +155,27 @@ button {
   
 .column {
     flex: 50%;
+}
+
+/*========================================================== Contact Section ===================================================================*/
+
+#contact{
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-color: #9e9b9b29;
+}
+
+.get-in-touch{
+    
+}
+
+.contact-text{
+    padding: 1rem;
+    width: 70%;
+    text-align: justify;
+    color: grey;
+    line-height: 28px;
+    font-size: 1.1rem;
+    margin: auto;
 }
