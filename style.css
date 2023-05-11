@@ -136,6 +136,7 @@ button {
 /*=========================================================== Skills Section ======================================================================= */
 
 #skills{
+    padding-top: 1px;
     height: auto;
     width: 100%;
     position: relative;
@@ -160,22 +161,42 @@ button {
 /*========================================================== Contact Section ===================================================================*/
 
 #contact{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    
     height: auto;
     width: 100%;
     position: relative;
     background-color: #9e9b9b29;
 }
 
-.get-in-touch{
-    
-}
 
 .contact-text{
-    padding: 1rem;
     width: 70%;
-    text-align: justify;
     color: grey;
     line-height: 28px;
     font-size: 1.1rem;
     margin: auto;
+}
+
+.red-star{
+    color: crimson;
+}
+
+.submit-message-button{
+    background-color: #059862;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    border: 2px solid #059862;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.no-label{
+    list-style: none;
 }
