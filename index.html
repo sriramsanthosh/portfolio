@@ -141,42 +141,35 @@
 
         <section id="contact">
             <h3 class="text-center"> <i class="fa-solid fa-user-tie"></i> &nbsp; Contact</h3>
-            <div class="row">
-                <div class="column get-in-touch text-justify">
-                    <!-- Get in Touch -->
-                    <ul class="no-label">
-                        <li><h4 class="text-justify">Get in touch</h4></li>
-                        <div class="contact-text text-justify">
-                            <p>Hey there!! so you want me to work with you, that really the spirit I am looking for. You can drop a message here. </p>
-                        </div>
-                        <li><h4 class="text-justify">My Address</h4></li>
-                    </ul>
-                    
-                    <p class="contact-text"><i class="fa-solid fa-location-dot"></i> &nbsp; Kadapa, Andhra Pradesh, India</p>
+            <div id="contact-container">
+
+                
+                <div id="my-details-container">
+
+                    <h3> Get In touch </h3>
+                    <p>Hey there!! You want me to work with you, that really the spirit I am looking for. You can drop a message here.  </p>
+
+                    <h3> My Address </h3>
+                    <div class="my-details-info-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Andhra Pradesh, India</span>
+                    </div>
+                    <div class="my-details-info-container">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>+91 7815980132</span>
+                    </div>
+                    <div class="my-details-info-container">
+                        <i class="far fa-envelope"></i>
+                        <span>myemail@gmail.com</span>
+                    </div>
                 </div>
-                <div class="column">
-                    <ul class="no-label">
-                        <li><h4 class="text-center">Message me</h4></li>
-                        <li>
-                            <form action="submit">
-                                <ul class="no-label">
-                                    <li><label for="">Name <span class="red-star">*</span></label></li>
-                                    <li><input type="text" required></li>
-                                    <li><label for="">Email <span class="red-star">*</span></label></li>
-                                    <li><input type="email" required></li>
-                                    <li><label for="">Message <span class="red-star">*</span></label></li>
-                                    <li><textarea name="" id="" cols="50" rows="5"></textarea></li>
-                                </ul>
-                                <div class="text-center">
-                                    <a href=""><button class="submit-message-button text-center" type="submit"><i class="fa-solid fa-paper-plane"></i> &nbsp; Submit Message</button></a>
-                                </div>
-                            </form>
-                        </li>
-                        
-
-                    </ul>
-
-                    
+                <div id="contact-form-container">
+                    <form id="contact-form">
+                        <input id="input-name" name="name" type="text" placeholder="Your Name">
+                        <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
+                        <textarea id="input-message" name="input-message" rows="2" cols=40 placeholder="Message"></textarea>
+                        <button class="send-message-button" type="submit">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
