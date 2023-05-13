@@ -3,6 +3,7 @@ body{
     user-select: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* font-size: 2rem; */
+    overflow-x: hidden;
 }
 
 /* =================================================================== Header Section ========================================================================= */
@@ -29,20 +30,36 @@ body{
     font-size: 0.9rem;
 }
 
+.horizontal-list-item:hover{
+    border-bottom: 0px solid white;
+    transition: 0.6s;
+}
+
+nav ul li :hover{
+    border-bottom: 3.5px solid white;
+    transition: 0.6s;
+
+}
+
+nav{
+    padding: 1rem;
+}
+
 .nav-links{
     color: white;
     text-decoration: none;
 }
 
+
 #header-image{
     height: 80vh;
+    width: 100vw;
     opacity: 0.8;
     background-image: url('images/macbook_mouse.jpg');
-    /* background-color: #9e9b9b29; */
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    /* box-shadow: 0px 1px 10px 2px white; */
 }
 
 .name-social-plate{
@@ -59,19 +76,20 @@ body{
 }
 
 .social-icons a{
-    border-radius: 50%;
     font-size: 1.7rem;
     color: white;
 }
 
-.social-icons:hover{
-    border-radius: 50%;
-
+.social-icons{
+    font-size: 1.7rem;
+    color: white;
+    padding: 0.8rem;
 }
 
-/* .social-icons a:hover{
-    border-radius: 50%;
-} */
+.social-icons:hover{
+    box-shadow: 1px 1px 10px 2px white;
+    transition: 700ms;
+}
 
 /*================================================================== About Section  =========================================================*/
 
@@ -127,7 +145,7 @@ body{
 }
 
 button {
-    transition-duration: 0.4s;
+    transition: 0.7s;
 }
 
 #download-button:hover{
@@ -139,12 +157,17 @@ button {
 }
 
 .parallax{
-    background-image: url('images/bg_parallax.jpg');
-    padding: 35vh;
+    background-image: url('images/computer\ bg.jpeg');
+    margin-left: 10%;
+    margin-right: 10%;
+    cursor: pointer;
+    background-size: cover;
+    /* padding: 35vh; */
+    height: 70vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* width: 80vw; */
 }
 /*=========================================================== Skills Section ======================================================================= */
 
@@ -253,3 +276,8 @@ button {
     background-color: #059862;
     color: white;
 }
+
+
+/* =========================================================== Upper Arrow ==================================================== */
+
+

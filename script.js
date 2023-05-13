@@ -11,12 +11,12 @@ var temp = setInterval(function(){
             headerbg.style.boxShadow = '1px 1px 100px 5px purple';
             i++; break;
         case 1:
-            getphoto.style.boxShadow = '1px 1px 100px 5px skyblue';
+            getphoto.style.boxShadow = '1px 1px 100px 5px white';
             headerbg.style.boxShadow = '1px 1px 100px 5px green';
             i++; break;
         case 2:
-            getphoto.style.boxShadow = '1px 1px 100px 5px red';
-            headerbg.style.boxShadow = '1px 1px 100px 5px pink';
+            getphoto.style.boxShadow = '1px 1px 100px 5px aqua';
+            headerbg.style.boxShadow = '1px 1px 100px 5px gold';
             i++; break;
         case 3:
             getphoto.style.boxShadow = '1px 1px 100px 5px green';
