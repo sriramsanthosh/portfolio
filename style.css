@@ -11,6 +11,7 @@ section, header{
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 section:nth-child(2n){
@@ -182,10 +183,93 @@ button {
 }
 /*=========================================================== Skills Section ======================================================================= */
 
-#skills{
-    /* padding-top: 1px; */
-    /* position: relative; */
-    
+.skills-container{
+    width: 50%;
+    /* background-color: aqua; */
+    /* border:2px solid #059862; */
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-progress{
+    background-color: gainsboro;
+    border-radius: 0.8rem;
+    /* border: 2px solid black; */
+    width: 200px;
+    font-size: 1rem;
+    height: auto;
+    font-weight: bolder;
+    margin: 1rem;
+}
+
+.skill-progress>div{
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+.skill-name span{
+    color: white;
+    margin-left: 1rem;
+}
+
+
+
+/* ============== Percentage Classes ================== */
+
+.eighty-five-percent{
+    width: 85%;
+    height: inherit;
+}
+
+.eighty-percent{
+    width: 80%;
+    height: inherit;
+}
+
+.seventy-five-percent{
+    width: 75%;
+    height: inherit;
+}
+.seventy-percent{
+    width: 70%;
+    height: inherit;
+}
+
+.fourty-five-percent{
+    width: 45%;
+    height: inherit;
+}
+
+.sixty-percent{
+    width: 60%;
+    height: inherit;
+}
+.sixty-five-percent{
+    width: 65%;
+    height: inherit;
+}
+
+
+
+/* ====================== Colour classes ================================= */
+
+
+.bg-blue{
+    background-color: #2857a4;
+}
+
+.bg-orange{
+    background-color: #ec4d1c;
+}
+
+.bg-light-purple{
+    background-color: #93738c;
+}
+
+.bg-teal{
+    background-color: teal;
 }
 
 /*=========================================================== Education Section =============================================================== */
