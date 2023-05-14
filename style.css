@@ -53,7 +53,8 @@ section:nth-child(2n+1){
 
 nav ul li :hover{
     border-bottom: 3.5px solid white;
-    transition: 0.6s;
+    /* transition: 0.6s; */
+    transition: all 0.6s ease-in-out;
 
 }
 
@@ -68,9 +69,9 @@ nav{
 
 
 #header-image{
-    height: 80vh;
+    height: 70vh;
     width: 100vw;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     background-image: url('images/macbook_mouse.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -117,7 +118,7 @@ nav{
     height: 12rem;
     width: 12rem;
     margin: auto;
-    margin-top: -16vh;
+    margin-top: -13vh;
 }
 
 .dp{
@@ -274,6 +275,102 @@ button {
 
 /*=========================================================== Education Section =============================================================== */
 
+.timeline-container{
+    position: relative;
+    width: 100%; 
+    /* border: 2px solid black; */
+}
+
+.timeline-box{
+    position: relative;
+    margin: 5px;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    /* border: 2px solid rgb(160, 160, 160); */
+}
+
+.timeline-box:nth-child(2n){
+    left: 53%;
+}
+
+.timeline-divider{
+    position: absolute;
+    height: 75%;
+    width: 0px;
+    border: 2px dashed rgb(211, 211, 211);
+    left: 50%;
+    top: 10%;
+}
+
+.timeline-traveller{
+    position: sticky;
+    /* position: fixed; */
+    top: 30%;
+    font-size: xx-large;
+    transform: rotate(90deg);
+    color: #2857a4;
+    
+
+}
+
+.education-block{
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.institute-logo{
+    /* position: absolute; */
+    float: left;
+    background-image: url(images/NITA_logo.png);
+    background-size: contain;
+    padding: 1.5rem;
+    background-repeat: no-repeat;
+    /* background: fixed; */
+}
+
+.institute-name{
+    /* font-size: 1.4rem; */
+    /* float: right; */
+    color: #2857a4;
+    margin: 0;
+    /* float: right; */
+}
+
+.degree-name{
+    margin: 5px 0 0;
+    color: #eb822d;
+    font-weight: bold;
+    /* font-size: 1.2rem; */
+    margin: 0;
+    /* float: right; */
+
+}
+
+.degree-duration{
+    color: #9e9b9b;
+    font-weight: bold;
+    color: grey;
+    /* font-size: 1rem; */
+    margin: 0;
+    /* float: right; */
+
+}
+
+.institute-place{
+    color: #2857a4;
+    font-weight: bold;
+    /* font-size: 1rem; */
+    margin: 0;
+    /* float: right; */
+}
+
+.institute-details{
+    margin-left: 15px;
+    /* text-align: right; */
+    font-weight: bold;
+}
 
 /* ========================================================== Projects Section  ===============================================================*/
 
@@ -370,3 +467,19 @@ button {
 /* =========================================================== Upper Arrow ==================================================== */
 
 
+/* ==================================================== Media Queries ====================================================*/
+
+@media screen and (max-width:600px){
+    .timeline-divider{
+        left: 5%;
+    }
+
+    .timeline-box{
+        left: 12% !important;
+        width: 80%;
+    }
+
+    body{
+        font-size:  15px !important;
+    }
+} 

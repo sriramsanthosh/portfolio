@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Sriram Santhosh Itha - PortFolio</title>
     <!-- Font Awesome Icons  -->
     <script src="https://kit.fontawesome.com/0d3ce04075.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="mediaqueries.css"> -->
 </head>
 
 <body>
@@ -18,12 +19,12 @@
             <nav id="nav-bar">
                 <ul class="horizontal-list text-center">
                     <li class="horizontal-list-item"><a class="nav-links" href="#"><span>Home</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#about"><span> About</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#education"><span> Eduction</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#projects"><span> Projects</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#skills"><span> Sills</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#portfolio"><span> Portolio</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#contact"><span> Cotact</span></a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#about"><span>About</span></a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#education"><span>Education</span></a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#projects"><span>Projects</span></a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#skills"><span>Skills</span></a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#portfolio"><span>Portfolio</span></a></li>
+                    <li class="horizontal-list-item"><a class="nav-links" href="#contact"><span>Contact</span></a></li>
                 </ul>
             </nav>
 
@@ -78,12 +79,12 @@
             <div class="skills-container">
                 <div class="skill-progress">
                     <div class="eighty-five-percent bg-blue">
-                        <div class="skill-name"><span>C++</span></div>
+                        <div class="skill-name"><span>C</span></div>
                     </div>
                 </div>
                 <div class="skill-progress">
                     <div class="seventy-five-percent bg-orange">
-                        <div class="skill-name"><span>Problem Solving</span></div>
+                        <div class="skill-name"><span>C++</span></div>
                     </div>
                 </div>
                 <div class="skill-progress">
@@ -118,56 +119,62 @@
                 </div>
             </div>
             
-            <!-- <div class="row">
-                <div class="column">
-                    <h3 id="courses" class="text-center"><i class="fa-solid fa-award"></i> &nbsp; Course Work</h3>
-                    <ul id="course-work">
-                        <li class="course">Data Structures and Algorithms</li>
-                        <li class="course">Object Oriented Programming</li>
-                        <li class="course">Computer Networks</li>
-                        <li class="course">DBMS</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3 id="courses" class="text-center"><i class="fa-solid fa-gears"></i> &nbsp; Technical Skills</h3>
-                    <ul id="skill">
-                        <li class="skill">C(Programming Language)</li>
-                        <li class="skill">C++</li>
-                        <li class="skill">Python</li>
-                        <li class="skill">JavaScript</li>
-                        <li class="skill">HTML</li>
-                        <li class="skill">CSS</li>
-                        <li class="skill">BootStrap</li>
-                        <li class="skill">Git</li>
-                    </ul>
-                    
-                    
-                </div>
-            </div> -->
-            
         </section>
 
         <section id="education">
-            <div id="my-education">
-                <h3 class="text-center"><i class="fa-solid fa-graduation-cap"></i> &nbsp; Education</h3>
-                <div class="education-container">
-                    <div class="school">
-                        <h5><img src="images/NITA_logo.png" alt="NITA_logo" width="31px"> National Institute of Technology, Agartala</h5>
-                        <p>2020-2024</p>
-                        <p>CGPA : 8.29</p>
+            <h3 class="text-center"><i class="fa-solid fa-graduation-cap"></i> &nbsp; Education</h3>
+            <div class="timeline-container">
+                <div class="timeline-box ">
+                    <div class="institute-logo">
                     </div>
-
-                    <div class="school">
-                        <h5><img src="images/Narayana_College_Logo.png" alt="inter-logo" width="31px">Narayana Junior College</h5>
-                        <p>2017-2019</p>
-                        <p>CGPA : 9.88</p>
-                    </div>
-                    <div class="school">
-                        <h5>Sri Sai Krishna EM High School</h5>
-                        <p>2016-2017</p>
-                        <p>CGPA : 9.7</p>
+                    <div class="institute-details">
+                        <ul class="no-bullets">
+                            <h4 class="institute-name">National Institute of Technology, Agartala</h4>
+                            <h6 class="institute-place">Agartala, Tripura</h6>
+                            <h5 class="degree-name">B Tech in Electronics and Communication Engineering</h5>
+                            <h6 class="degree-duration">Dec 2020 - May 2024</h6>
+                            <h6 class="degree-duration">CGPA : 8.29 (Till Semester - 05)</h6>
+                        </ul>
+                        
                     </div>
                 </div>
+
+                <div class="timeline-box">
+                    <div class="institute-logo">
+                    </div>
+                    <div class="institute-details">
+                        <ul class="no-bullets">
+                            <h4 class="institute-name">Narayana Junior College, Kadapa, Andhra Pradesh</h4>
+                            <h6 class="institute-place">Kadapa, Andhra Pradesh</h6>
+                            <h5 class="degree-name">Class - 12</h5>
+                            <h6 class="degree-duration">Jun 2017 - Mar 2019</h6>
+                            <h6 class="degree-duration">CGPA : 9.88</h6>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <div class="timeline-box ">
+                    <div class="institute-logo">
+                    </div>
+                    <div class="institute-details">
+                        <ul class="no-bullets">
+                            <h4 class="institute-name">Sri Sai Krishna EM High School, Kadapa</h4>
+                            <h6 class="institute-place">Kadapa, Andhra Pradesh</h6>
+                            <h5 class="degree-name">Class - 10</h5>
+                            <h6 class="degree-duration">Jun 2016 - Mar 2017</h6>
+                            <h6 class="degree-duration">CGPA : 9.7</h6>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+                <div class="timeline-divider">
+                    <div class="timeline-traveller">
+                        <span><i class="fa-solid fa-plane"></i></span>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
