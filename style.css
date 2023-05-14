@@ -6,6 +6,21 @@ body{
     overflow-x: hidden;
 }
 
+section, header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-child(2n){
+    background-color: white;
+}
+
+section:nth-child(2n+1){
+    background-color: #9e9b9b29;;
+}
+
 /* =================================================================== Header Section ========================================================================= */
 
 .text-center{
@@ -94,10 +109,7 @@ nav{
 /*================================================================== About Section  =========================================================*/
 
 #about{
-    height: auto;
-    width: 100%;
     position: relative;
-    margin-bottom: 30px;
 }
 
 #dp-container{
@@ -161,23 +173,18 @@ button {
     margin-left: 10%;
     margin-right: 10%;
     cursor: pointer;
+    height: 60vh;
+    
     background-size: cover;
-    /* padding: 35vh; */
-    height: 70vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    /* width: 80vw; */
 }
 /*=========================================================== Skills Section ======================================================================= */
 
 #skills{
-    padding-top: 1px;
-    height: auto;
-    width: 100%;
-    position: relative;
-    margin-bottom: 30px;
-    background-color: #9e9b9b29;
+    /* padding-top: 1px; */
+    /* position: relative; */
     
 }
 
@@ -187,12 +194,12 @@ button {
 /* ========================================================== Projects Section  ===============================================================*/
 
 #projects{
-    padding-top: 1px;
+    /* padding-top: 1px; */
     height: auto;
     width: 100%;
     position: relative;
-    margin-bottom: 30px;
-    background-color: #9e9b9b29;
+    /* margin-bottom: 30px; */
+    /* background-color: #9e9b9b29; */
 }
 
 
@@ -247,10 +254,8 @@ button {
 #contact{
     padding-top: 1px;
     padding-bottom: 1px;
-    height: auto;
-    width: 100%;
     position: relative;
-    background-color: #9e9b9b29;
+    /* background-color: #9e9b9b29; */
 }
 
 .contact-text{
