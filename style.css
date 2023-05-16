@@ -15,11 +15,11 @@ section, header{
 }
 
 section:nth-child(2n){
-    background-color: #9e9b9b29;
+    background-color: white;
 }
 
 section:nth-child(2n+1){
-    background-color: white;
+    background-color: #9e9b9b29;
 }
 
 /* =================================================================== Header Section ========================================================================= */
