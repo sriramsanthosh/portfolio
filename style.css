@@ -15,11 +15,11 @@ section, header{
 }
 
 section:nth-child(2n){
-    background-color: white;
+    background-color: #9e9b9b29;
 }
 
 section:nth-child(2n+1){
-    background-color: #9e9b9b29;;
+    background-color: white;
 }
 
 /* =================================================================== Header Section ========================================================================= */
@@ -93,12 +93,12 @@ nav{
 }
 
 .social-icons a{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: white;
 }
 
 .social-icons{
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
     color: white;
     padding: 0.8rem;
 }
@@ -392,14 +392,7 @@ button {
 
 /* ========================================================== Projects Section  ===============================================================*/
 
-/* #projects{
-    padding-top: 1px;
-    height: auto;
-    width: 100%;
-    position: relative;
-    margin-bottom: 30px;
-    background-color: #9e9b9b29;
-} */
+
 
 .projects-container{
     box-sizing: border-box;
@@ -449,7 +442,9 @@ button {
 
 /*========================================================== Contact Section ===================================================================*/
 
-
+#contact{
+    background-image: repeating-linear-gradient(to bottom right, 	#FF671F, 	#FFFFFF, #046A38);
+}
 
 .contact-container{
     display: inline-flex;
@@ -470,6 +465,45 @@ button {
 .no-label{
     list-style: none;
 }
+
+.input{
+    border: none;
+    font-size: inherit;
+    /* backface-visibility: ; */
+    width: 100%; 
+    background-color: transparent;
+}
+
+.input:focus{
+    outline: none;
+}
+
+
+.contact-item{
+    margin: 2rem;
+    border-bottom: 2px solid grey;
+}
+
+/* Send Message Button */
+
+.send-message-button{
+    font-size: large;
+    font-weight: bolder;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    background-color: white;
+    color: #059862;
+    border: 2px solid #059862;
+}
+
+
+.send-message-button:hover{
+    cursor: pointer;
+    background-color: #059862;
+    color: white;
+    transition: 0.6s;
+}
+
 
 
 
@@ -495,9 +529,7 @@ button {
     /* opacity: 0.5; */
     box-shadow: 0 0 20px gold;
     transition: all 0.6s ease-in-out;
-    
 }
-
 
 /* ==================================================== Media Queries ====================================================*/
 @media screen and (max-width:800px){
@@ -510,7 +542,7 @@ button {
 @media screen and (max-width:653px){
     .project-box{
         margin: 0.5rem;
-        width: 85%;
+        max-width: 85%;
     }
 }
 
@@ -540,7 +572,9 @@ button {
     .project-box{
         margin: 5px;
     }
+    
 } 
+
 
 
 
@@ -599,18 +633,3 @@ button {
     margin: auto;
 } */
 
-/* .send-message-button{
-    font-size: large;
-    font-weight: bolder;
-    padding: 1rem 2rem;
-    border-radius: 6px;
-    background-color: white;
-    color: #059862;
-    border: 2px solid #059862;
-} */
-
-/* .send-message-button:hover{
-    cursor: pointer;
-    background-color: #059862;
-    color: white;
-} */
