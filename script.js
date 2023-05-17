@@ -4,6 +4,9 @@
 var getphoto = document.querySelector('.dp');
 var headerbg = document.querySelector('#header-image');
 let i = 0;
+getphoto.style.transition = '0.9s ease';
+headerbg.style.transition = '0.9s ease';
+
 var temp = setInterval(function(){
     switch(i){
         case 0:
@@ -29,4 +32,27 @@ var temp = setInterval(function(){
             break;
     }
 }, 800);
+
+
+
+var getname = document.querySelector('#my-name');
+let j = 0;
+var temp2 = setInterval(function(){
+    switch(j){
+        case 0:
+            getname.innerHTML = "Sriram";
+            j++;
+            break;
+        case 1:
+            getname.innerHTML = "Santhosh";
+            j++;
+            break;
+        case 2:
+            getname.innerHTML = "Coder";
+            j = 0;
+            break;
+    }
+}, 800);
+
+
 
