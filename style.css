@@ -1,32 +1,25 @@
 body{
     margin: 0px;
-    /* user-select: none; */
+    user-select: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
     overflow-x: hidden;
-    /* background-image: repeating-linear-gradient(to bottom right, 	#FF671F, 	#FFFFFF, #046A38); */
+    box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
-a:hover{
-    color: red;
-    transition: 0.5s ease-in-out;
-}
-
-/* i{
-    color: red;
-} */
+/* ========================== Global Tags ===================================== */
 
 section, header{
-    width: 100%;
-    height: auto;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+section{
+    padding-bottom: 2rem;
+    padding-top: 50px;
 }
 
 section:nth-child(2n){
@@ -35,8 +28,10 @@ section:nth-child(2n){
 
 section:nth-child(2n+1){
     background-color: #9e9b9b29;
-    /* background-color: black; */
-    /* background-image: repeating-linear-gradient(to bottom right, 	#FF671F, 	#FFFFFF, #046A38); */
+}
+
+.no-label{
+    list-style: none;
 }
 
 /* =================================================================== Header Section ========================================================================= */
@@ -49,18 +44,85 @@ section:nth-child(2n+1){
     text-align: justify;
 }
 
+/* ======================== navigation bar ============================ */
+
+
+#nav-bar{
+    background: transparent;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    padding: 16px;
+    z-index: 10;
+}
+
+.nav-item{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.nav-list{
+    float: right;
+    margin-right: 20px;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.nav-link{
+    padding: 7px 13px;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    transition: 0.8s;
+    color: red;
+}
+
+
+
+/* ========================== Logo and Check Box ============================ */
+
+.logo{
+    float: left;
+    margin-left: 25px;
+}
+
+.logo a{
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.check-button{
+    cursor: pointer;
+    color: black;
+    display: none;
+    float: right;
+    font-size: larger;
+    margin-right: 48px;
+}
+
+#nav-check{
+    display: none;
+}
+
+
+/*====================== Nav bar social Icons ===================*/
+
 
 .horizontal-list{
+    list-style: none;
     padding-left: 0px;
     margin: 0px;
-    list-style: none;
 }
 
 .horizontal-list-item{
     display: inline-block;
     margin: 0px 1rem 0px 1rem;
-    font-weight: bold;
-    font-size: 0.9rem;
 }
 
 .horizontal-list-item:hover{
@@ -68,27 +130,13 @@ section:nth-child(2n+1){
     transition: 0.6s;
 }
 
-nav ul li :hover{
-    border-bottom: 3.5px solid white;
-    /* transition: 0.6s; */
-    transition: all 0.6s ease-in-out;
-
-}
-
-nav{
-    padding: 1rem;
-}
-
-.nav-links{
-    color: white;
-    text-decoration: none;
-}
 
 
 #header-image{
+    /* position: relative; */
     height: 70vh;
-    width: 100vw;
-    /* opacity: 0.8; */
+    width: 100%;
+    opacity: 0.9;
     background-image: url('images/macbook_mouse.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -97,27 +145,25 @@ nav{
 }
 
 .name-social-plate{
-    margin-top: 25vh;
+    margin-top: 27vh;
 }
 
 #my-name{
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
     color: white;
     font-family: sans-serif;
-    margin-bottom: 0.5rem;
+    font-size: 48px;
+    letter-spacing: 1.6px;
+    margin-bottom: 3px;
     width: auto;
 }
 
 .social-icons a{
-    font-size: 1.6rem;
+    font-size: 26px;
     color: white;
 }
 
 .social-icons{
-    /* font-size: 1.7rem; */
-    color: white;
-    padding: 0.8rem;
+    padding: 12px;
 }
 
 .social-icons:hover{
@@ -128,54 +174,45 @@ nav{
 /*================================================================== About Section  =========================================================*/
 
 #about{
-    position: relative;
+    position: inherit;
 }
 
 #dp-container{
-    height: 12rem;
-    width: 12rem;
+    height: auto;
+    width: 200px;
     margin: auto;
-    margin-top: -13vh;
+    margin-top: -21vh;
+    z-index: 2;
 }
 
 .dp{
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    /* box-shadow: 1px 1px 10px 2px white; */
 }
 
 .dp:hover{
     cursor: pointer;
 }
 
+
 #about-text{
-    padding: 1rem;
-    width: 70%;
+    width: 60%;
     text-align: justify;
     color: grey;
-    line-height: 28px;
-    font-size: 1.1rem;
+    font-size: 20px;
     margin: auto;
 }
 
 #download-button{
+    border: 2px solid crimson;
     background-color: crimson;
+    border-radius: 6px;
     color: white;
     font-size: large;
     font-weight: bolder;
     padding: 1rem 2rem;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    /* margin: auto; */
     text-align: center;
-}
-
-#resume{
-    text-align: center;
-}
-
-button {
     transition: 0.7s;
 }
 
@@ -184,42 +221,28 @@ button {
     background-color: white;
     color: crimson;
     border: 2px solid crimson;
-
 }
 
-.parallax{
-    /* background-image: url('images/computer\ bg.jpeg'); */
-    /* margin-left: 10%;
-    margin-right: 10%; */
-    /* cursor: pointer;
-    height: 60vh; */
-    
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+#resume{
+    text-align: center;
 }
+
 /*=========================================================== Skills Section ======================================================================= */
 
 .skills-container{
-    width: 50%;
-    /* background-color: aqua; */
-    /* border:2px solid #059862; */
+    width: 80%;
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .skill-progress{
-    background-color: gainsboro;
-    border-radius: 0.8rem;
-    /* border: 2px solid black; */
-    width: 200px;
-    font-size: 1rem;
+    background-color: rgb(236, 236, 236);
+    border-radius: 12px;
+    width: 220px;
+    font-size: 16px;
     height: auto;
-    font-weight: bolder;
-    margin: 1rem;
+    margin: 16px;
 }
 
 .skill-progress>div{
@@ -230,9 +253,9 @@ button {
 .skill-name span{
     color: white;
     margin-left: 1rem;
+    font-weight: bolder;
+    font-size: large;
 }
-
-
 
 /* ============== Percentage Classes ================== */
 
@@ -269,10 +292,7 @@ button {
     height: inherit;
 }
 
-
-
 /* ====================== Colour classes ================================= */
-
 
 .bg-blue{
     background-color: #2857a4;
@@ -292,21 +312,18 @@ button {
 
 /*=========================================================== Education Section =============================================================== */
 
-
-
 .timeline-container{
     position: relative;
     width: 100%; 
-    /* border: 2px solid black; */
 }
 
 .timeline-box{
     position: relative;
     margin: 5px;
+    margin-bottom: 8vh;
     width: 40%;
     left: 5%;
     min-height: 150px;
-    /* border: 2px solid rgb(160, 160, 160); */
 }
 
 .timeline-box:nth-child(2n){
@@ -317,20 +334,17 @@ button {
     position: absolute;
     height: 75%;
     width: 0px;
-    border: 2px dashed #2858a49e;
+    border: 2px dashed #accbfd9e;
     left: 50%;
     top: 10%;
 }
 
 .timeline-traveller{
     position: sticky;
-    /* position: fixed; */
-    top: 30%;
+    top: 40vh;
     font-size: xx-large;
     transform: rotate(90deg);
     color: #225dbc;
-    
-
 }
 
 .education-block{
@@ -342,115 +356,92 @@ button {
 .institute-logo1,
 .institute-logo2,
 .institute-logo3{
-    /* position: absolute; */
     float: left;
     background-size: contain;
     padding: 1.5rem;
     background-repeat: no-repeat;
-    /* background: fixed; */
 }
 
 .institute-logo1{
-    background-image: url(images/NITA_logo.png);
-    
+    background-image: url(images/NITA_logo.png);   
 }
 
 .institute-logo2{
     background-image: url(images/Narayana_College_Logo.png);
-    
 }
 
 .institute-logo3{
-    
     background-image: url(images/SSK\ Logo.jpg);
 }
 
 .institute-name{
-    /* font-size: 1.4rem; */
-    /* float: right; */
     color: #2857a4;
     margin: 0;
-    /* float: right; */
 }
 
 .degree-name{
     margin: 5px 0 0;
     color: #eb822d;
     font-weight: bold;
-    /* font-size: 1.2rem; */
     margin: 0;
-    /* float: right; */
-
 }
 
 .degree-duration{
     color: #9e9b9b;
     font-weight: bold;
     color: grey;
-    /* font-size: 1rem; */
     margin: 0;
-    /* float: right; */
-
 }
 
 .institute-place{
     color: #2857a4;
     font-weight: bold;
-    /* font-size: 1rem; */
     margin: 0;
-    /* float: right; */
 }
 
 .institute-details{
     margin-left: 15px;
-    /* text-align: right; */
     font-weight: bold;
 }
 
 /* ========================================================== Projects Section  ===============================================================*/
 
-
-
 .projects-container{
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    /* padding: 0 50px; */
-    /* margin-bottom: 20px; */
     justify-content: space-around;
+
 }
 
 .project-box{
-    max-width: 45%;
+    max-width: 40%;
     overflow: hidden;
     margin: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    border-radius: 10px;
 }
 
 .project-box img{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 
 .project-box:hover{
-    box-shadow: 0 0 20px #74ADC8;
+    box-shadow: 0 0 50px #74ADC8;
     cursor: pointer;
-    /* opacity: 0.3; */
     background-color: #80808078;
     color: white;
     transition: all 0.6s ease-in-out;
 }
 
-
-
-
 /*=========================================================== PortFolio Section ================================================================  */
 
 .row {
     display: flex;
-
 }
   
 .column {
@@ -460,33 +451,22 @@ button {
 /*========================================================== Contact Section ===================================================================*/
 
 #contact{
-    background-image: repeating-linear-gradient(to bottom right, 	#FF671F, 	#FFFFFF, #046A38);
+    background-image: repeating-linear-gradient(to bottom right, #FF671F, 	#FFFFFF, #046A38);
 }
 
 .contact-container{
     display: inline-flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .contact-col{
     width: 45%;
-    /* border: 2px solid red ; */
-}
-
-
-
-
-.no-label{
-    list-style: none;
 }
 
 .input{
     border: none;
     font-size: inherit;
-    /* backface-visibility: ; */
     width: 100%; 
     background-color: transparent;
 }
@@ -495,22 +475,27 @@ button {
     outline: none;
 }
 
-
 .contact-item{
     margin: 2rem;
     border-bottom: 2px solid grey;
 }
 
-/* Send Message Button */
+.contact-list{
+    margin: 0;
+    padding-left: 0;
+}
+
+/* ======= Send Message Button =======*/
 
 .send-message-button{
     font-size: large;
     font-weight: bolder;
-    padding: 1rem 2rem;
+    padding: 16px 32px;
     border-radius: 6px;
     background-color: white;
     color: #059862;
     border: 2px solid #059862;
+    transition: 0.6s;
 }
 
 
@@ -518,11 +503,7 @@ button {
     cursor: pointer;
     background-color: #059862;
     color: white;
-    transition: 0.6s;
 }
-
-
-
 
 
 /* =========================================================== Footer ==================================================== */
@@ -540,21 +521,75 @@ button {
     margin: 10px;
     padding: 5px;
     /* border-radius: 50%; */
+    color: black;
 }
 
 .footer-links:hover{
     /* opacity: 0.5; */
-    box-shadow: 0 0 20px gold;
+    box-shadow: 0 0 20px blue;
     transition: all 0.6s ease-in-out;
 }
 
 /* ==================================================== Media Queries ====================================================*/
+
+
+@media screen and (max-width:1000px){
+    .check-button{
+       display: block;
+    }
+
+    .nav-list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        /* background: #2c3e50; */
+        top: 70px;
+        left: 0;
+        text-align: center;
+        left: -100%;
+        transition: 0.5s;
+        z-index: 3;
+    }
+
+    #nav-bar{
+        z-index: 3;
+    }
+
+    .nav-item{
+        display: block;
+    }
+
+    active, .nav-link:hover{
+        background: none;
+        color:#0082e6
+    }
+
+    .check-button:checked ~ .nav-list{
+        left: 0;
+    }
+    
+}
+
+
 @media screen and (max-width:800px){
     .project-box{
-        /* max-width: 0%; */
         margin:10px;
     }
+    .row{
+        display: block;
+    }
+    .column{
+        margin: auto;
+        width: 80%;
+    }
 }
+
+@media screen and (max-width:768px){
+    #about-text{
+        width: 85%;
+    }
+}
+
 
 @media screen and (max-width:653px){
     .project-box{
@@ -563,6 +598,11 @@ button {
     }
 }
 
+@media screen and (max-width:635px){
+    .skill-progress{
+        width: 90%;
+    }
+}
 
 @media screen and (max-width:600px){
     .timeline-divider{
@@ -573,80 +613,53 @@ button {
         left: 12% !important;
         width: 80%;
     }
+/* 
+body{
+    font-size:  15px !important;
+} */
 
-    body{
-        font-size:  15px !important;
-    }
+.contact-container{
+    display: block;
+}
 
-    .contact-container{
-        display: block;
-    }
-
-    .contact-col{
-        width: 100%;
-    }
-
-    .project-box{
-        margin: 5px;
-    }
+.contact-col{
+    width: 100%;
+    margin-left: 5px;
     
+}
+
+
+.project-box{
+    margin: 5px;
+}
+
 } 
 
+@media screen and (max-width:548px){
+    /* education text  */
+    body{
+        font-size: 20px !important;
+    }
+    #my-name{
+        font-size: 40px;
+    }
+    .social-icons{
+        margin: 3px;
+    }
+    .social-icons a{
+        font-size: larger;
+    }
+}
 
+@media screen and (max-width:448px){
+    /* portfolio text; */
+    body{
+        font-size: 16px !important;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Contact Section */
-
-
-/* #contact-form {
-    margin-left: 15%;
-} */
-
-/* #contact-form-container {
-    width: 50%;
-} */
-
-/* #my-details-container {
-    width: 35%;
-    margin-left: 15%;
-} */
-/* 
-.my-details-info-container {
-    margin-bottom: 20px;
-} */
-
-/* .my-details-info-container span {
-    margin-left: 0.4rem;
-} */
-
-
-/* #contact{
-    padding-top: 1px;
-    padding-bottom: 1px;
-    position: relative;
-    background-color: #9e9b9b29;
-} */
-
-/* .contact-text{
-    width: 70%;
-    color: grey;
-    line-height: 28px;
-    font-size: 1.1rem;
-    margin: auto;
-} */
-
+@media screen and (max-width:342px){
+    body{
+        font-size: 13px !important;
+    }
+}

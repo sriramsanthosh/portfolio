@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="description"
-        content="This website is a portfolio of Itha Sriram Santhosh pursuing BTech with specialization in Electronics and Communication Engineering at National Institute of Technology Agartala (NIT Agartala). This portfolio consists about my skills, education, projects and as well you can contact me. I am interested in software development and web development.">
-    <meta name="keywords"
-        content="portfolio, Itha Sriram Santhosh, Sriram Santhosh Itha Kadapa Portfolio, Sriram Santhosh NIT Agartala, sriramsanthosh nit agartala portfolio, coding, html, css, JavaScript">
+    <meta name="description" content="This website is a portfolio of Itha Sriram Santhosh pursuing BTech with specialization in Electronics and Communication Engineering at National Institute of Technology Agartala (NIT Agartala). This portfolio consists about my skills, education, projects and as well you can contact me. I am interested in software development and web development.">
+    <meta name="keywords" content="portfolio, Itha Sriram Santhosh, Sriram Santhosh Itha Kadapa Portfolio, Sriram Santhosh NIT Agartala, sriramsanthosh nit agartala portfolio, coding, html, css, JavaScript">
     <meta name="author" content="Itha Sriram Santhosh">
-    <title>Sriram Santhosh Itha - PortFolio</title>
+    <title>Sriram's PortFolio</title>
     <!-- Font Awesome Icons  -->
     <script src="https://kit.fontawesome.com/0d3ce04075.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -18,20 +16,23 @@
 </head>
 
 <body>
-
-    <header id="#home">
+    <header id="home">
         <div id="header-image">
             <nav id="nav-bar">
-                <ul class="horizontal-list text-center">
-                    <li class="horizontal-list-item"><a class="nav-links" href="#"><span>Home</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#about"><span>About</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#education"><span>Education</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#projects"><span>Projects</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#skills"><span>Skills</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#portfolio"><span>Portfolio</span></a></li>
-                    <li class="horizontal-list-item"><a class="nav-links" href="#contact"><span>Contact</span></a></li>
+                <input id="nav-check" type="checkbox">
+                <label for="checkbox" class="check-button"><i class="fa-solid fa-bars"></i></label>
+                <div class="logo"><a href="#home"><span>Pro</span>file</a></div>
+                <ul class="no-label text-center nav-list">
+                    <li class="nav-item"><a class="nav-link active" href="#home"><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><span>About</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><span>Skills</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><span>Education</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><span>Projects</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio"><span>Portfolio</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><span>Contact</span></a></li>
                 </ul>
             </nav>
+            
             <div class="name-social-plate text-center">
                 <h1 id="my-name">Sriram Santhosh Itha</h1>
                 <ul class="horizontal-list text-center">
@@ -64,12 +65,9 @@
                     <br><br>
                     Get to know more about me by downloading my resume given below <br><br>
                     <div id="resume">
-                        <a href="Files/Itha Sriram Santhosh - Resume.pdf" download><button id="download-button"
-                                class="text-center" type="submit"><i class="fa-solid fa-download"></i> Download
-                                Resume</button></a>
+                        <a href="Files/Itha Sriram Santhosh - Resume.pdf" download><button id="download-button" class="text-center" type="submit"><i class="fa-solid fa-download"></i> Download Resume</button></a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -181,21 +179,17 @@
             <h3 class="text-center"> <i class="fa-solid fa-layer-group"></i> &nbsp; Projects</h3>
             <div class="projects-container">
                 <div class="project-box">
-                    <a href="https://github.com/sriramsanthosh/portfolio" target="_blank"><img
-                            src="images/portFolio.png" alt="tinDog"></a>
+                    <a href="https://github.com/sriramsanthosh/portfolio" target="_blank"><img src="images/portFolio.png" alt="tinDog"></a>
                 </div>
                 <div class="project-box">
                     <a href="https://github.com/sriramsanthosh/DrumKit"><img src="images/drumKit.png" alt="drumKit"></a>
                 </div>
                 <div class="project-box">
-                    <a href="https://github.com/sriramsanthosh/Dice-Game"><img src="images/diceGame.png"
-                            alt="diceGame"></a>
+                    <a href="https://github.com/sriramsanthosh/Dice-Game"><img src="images/diceGame.png" alt="diceGame"></a>
                 </div>
                 <div class="project-box">
                     <a href="https://github.com/sriramsanthosh/TinDog"><img src="images/tinDog.png" alt="tinDog"></a>
                 </div>
-
-
             </div>
         </section>
 
@@ -204,19 +198,15 @@
             <!-- Achievements -->
             <h3 id="my-portfolio" class="text-center"> <i class="fa-solid fa-list"></i> &nbsp; PortFolio</h3>
 
-
             <div class="row">
                 <div class="column">
                     <h4 class="coding-profiles text-center"><i class="fa-solid fa-code"></i> &nbsp; Coding Profiles</h4>
                     <ul>
                         <li>LeetCode : <a href="https://leetcode.com/coder_sriram/" target="_blank">coder_sriram</a>
                         </li>
-                        <li>HackerRank : <a href="https://www.hackerrank.com/sriramsanthosh"
-                                target="_blank">sriramsanthosh</a></li>
-                        <li>Codeforces : <a href="https://codeforces.com/profile/sriramsanthosh"
-                                target="_blank">sriramsanthosh</a></li>
-                        <li>CodeChef : <a href="https://www.codechef.com/users/sriramsanthosh"
-                                target="_blank">sriramsanthosh</a></li>
+                        <li>HackerRank : <a href="https://www.hackerrank.com/sriramsanthosh" target="_blank">sriramsanthosh</a></li>
+                        <li>Codeforces : <a href="https://codeforces.com/profile/sriramsanthosh" target="_blank">sriramsanthosh</a></li>
+                        <li>CodeChef : <a href="https://www.codechef.com/users/sriramsanthosh" target="_blank">sriramsanthosh</a></li>
                         <li>GitHub : <a href="https://github.com/sriramsanthosh" target="_blank">sriramsanthosh</a></li>
                     </ul>
                 </div>
@@ -227,12 +217,9 @@
                         <li>Solved 300+ problems in Leetcode and in top 19.17% (rated 1621+)</li>
                         <li>Achieved 5 star in C++ and 3 star in Problem Solving at HackerRanker</li>
                         <li>Achieved 3035<sup>th</sup> place in Google Coding Competitions 2023 (Farewell Round A)</li>
-                        <li>Achieved 3208<sup>th</sup> place in Google Coding Competitions 2022 (Round H)</li>
-
                     </ul>
                 </div>
             </div>
-
         </section>
 
         <section id="contact">
@@ -242,24 +229,18 @@
                     <ul class="no-label follow-box">
                         <li>Follow me : &nbsp;</li>
                         <li class="font-black">
-                            <a class="footer-links" target="_blank"
-                                href="https://www.linkedin.com/in/sriramsanthosh/"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                            <a class="footer-links" target="_blank" href="https://github.com/sriramsanthosh"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a class="footer-links" target="_blank" href="https://twitter.com/sriramsanthosh_"><i
-                                    class="fa-brands fa-twitter"></i></a>
+                            <a class="footer-links" target="_blank" href="https://www.linkedin.com/in/sriramsanthosh/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a class="footer-links" target="_blank" href="https://github.com/sriramsanthosh"><i class="fa-brands fa-github"></i></a>
+                            <a class="footer-links" target="_blank" href="https://twitter.com/sriramsanthosh_"><i class="fa-brands fa-twitter"></i></a>
                         </li>
                     </ul>
                 </div>
-
             </footer>
             <div class="contact-container">
                 <div class="contact-col">
                     <ul>
                         <h3> Get In touch </h3>
-                        <p>Hey there!! You want me to work with you, that really the spirit I am looking for. You can
-                            drop a message here. </p>
+                        <p>Hey there!! You want me to work with you, that really the spirit I am looking for. You can drop a message here. </p>
                         <h3> My Address </h3>
                         <p><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</p>
                     </ul>
@@ -267,14 +248,10 @@
                 <div class="contact-col">
                     <form action="mailto:sriramsanthosh80@gmail.com" method="post" enctype="text/plain">
                         <ul class="no-label contact-list" style="margin-left: 0px;">
-                            <li class="contact-item"><input class="input" id="Name" name="Name" type="text"
-                                    placeholder="Your Name" required></li>
-                            <li class="contact-item"><input class="input" id="Email" name="Email" type="email"
-                                    placeholder="Your Email" required></li>
-                            <li class="contact-item"><textarea class="input" name="Message" id="message" cols="20"
-                                    rows="4" placeholder="Message" required style="margin-left: 0px;"></textarea></li>
-                            <li class="contact-button text-center"><input type="submit"
-                                    class="send-message-button text-center" value="Send Message"></li>
+                            <li class="contact-item"><input class="input" id="Name" name="Name" type="text" placeholder="Your Name" required></li>
+                            <li class="contact-item"><input class="input" id="Email" name="Email" type="email" placeholder="Your Email" required></li>
+                            <li class="contact-item"><textarea class="input" name="Message" id="message" cols="20" rows="4" placeholder="Message" required style="margin-left: 0px;"></textarea></li>
+                            <li class="contact-button text-center"><input type="submit" class="send-message-button text-center" value="Send Message"></li>
                         </ul>
                     </form>
                 </div>

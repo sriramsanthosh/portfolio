@@ -4,8 +4,8 @@
 var getphoto = document.querySelector('.dp');
 var headerbg = document.querySelector('#header-image');
 let i = 0;
-getphoto.style.transition = '0.9s ease';
-headerbg.style.transition = '0.9s ease';
+getphoto.style.transition = '0.9s';
+headerbg.style.transition = '0.9s';
 
 var temp = setInterval(function(){
     switch(i){
@@ -33,26 +33,25 @@ var temp = setInterval(function(){
     }
 }, 800);
 
-
-
-var getname = document.querySelector('#my-name');
-let j = 0;
-var temp2 = setInterval(function(){
-    switch(j){
-        case 0:
-            getname.innerHTML = "Sriram";
-            j++;
-            break;
-        case 1:
-            getname.innerHTML = "Santhosh";
-            j++;
-            break;
-        case 2:
-            getname.innerHTML = "Coder";
-            j = 0;
-            break;
+var check = document.querySelector('.check-button');
+var temp3 = document.querySelector('.nav-list');
+var flag = false;
+check.addEventListener('click', function(){
+    if(flag){
+        temp3.style.left = '-100%';
     }
-}, 800);
+    else{
+        temp3.style.left = '0';
+    }
+    flag = !flag;
+});
 
-
-
+var temp4 = document.querySelectorAll('.nav-link');
+for(let k = 0; k<temp4.length; k++){
+    temp4[k].addEventListener('click', function(){
+        if(flag){
+            temp3.style.left = '-100%';
+            flag=!flag;
+        }
+    });
+}
