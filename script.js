@@ -33,25 +33,23 @@ var temp = setInterval(function(){
     }
 }, 800);
 
-var check = document.querySelector('.check-button');
-var temp3 = document.querySelector('.nav-list');
-var flag = false;
-check.addEventListener('click', function(){
-    if(flag){
-        temp3.style.left = '-100%';
-    }
-    else{
-        temp3.style.left = '0';
-    }
-    flag = !flag;
-});
 
+// Hide and seek function of nav-bar for small screen devices
+var flag = false;
+var temp3 = document.querySelector('.nav-list');
 var temp4 = document.querySelectorAll('.nav-link');
 for(let k = 0; k<temp4.length; k++){
     temp4[k].addEventListener('click', function(){
         if(flag){
             temp3.style.left = '-100%';
-            flag=!flag;
+            // flag=!flag;
         }
+        else{
+            temp3.style.left = '0';
+        }
+        console.log(flag);
+        flag = !flag;
+        console.log(flag);
+        
     });
 }
