@@ -42,14 +42,10 @@ for(let k = 0; k<temp4.length; k++){
     temp4[k].addEventListener('click', function(){
         if(flag){
             temp3.style.left = '-100%';
-            // flag=!flag;
         }
         else{
             temp3.style.left = '0';
         }
-        console.log(flag);
         flag = !flag;
-        console.log(flag);
-        
     });
 }
