@@ -1,6 +1,3 @@
-/* ================================================|| Loads immediately when website opens ||=================================================================== */
-
-/* ========================|| For Profile Pic (dp) ||================================= */
 var getphoto = document.querySelector('.dp');
 var headerbg = document.querySelector('#header-image');
 let i = 0;
@@ -34,7 +31,6 @@ var temp = setInterval(function(){
 }, 800);
 
 
-// Hide and seek function of nav-bar for small screen devices
 var flag = false;
 var temp3 = document.querySelector('.nav-list');
 var temp4 = document.querySelectorAll('.nav-link');
@@ -47,5 +43,50 @@ for(let k = 0; k<temp4.length; k++){
             temp3.style.left = '0';
         }
         flag = !flag;
+    });
+}
+
+// g tag
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-0FHG91R1PY');
+
+// 
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCFAEuV9cG_O3uVCRJExIUk7wJZSoYGrIE",
+    authDomain: "sriram-site.firebaseapp.com",
+    databaseURL: "https://sriram-site-default-rtdb.firebaseio.com",
+    projectId: "sriram-site",
+    storageBucket: "sriram-site.appspot.com",
+    messagingSenderId: "168607893293",
+    appId: "1:168607893293:web:ff86bc5c8fceaaf2b535a4",
+    measurementId: "G-0FHG91R1PY"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var contactFormDB = firebase.database().ref("contactForm");
+
+document.querySelector('.input-form').addEventListener('submit', submitForm);
+
+function submitForm(e){
+    e.preventDefault();
+    var name = document.querySelector('#name').value;
+    var email = document.querySelector('#email').value;
+    var msgcontent = document.querySelector('#message').value;
+    let date = new Date().toJSON();
+    saveContent(name, email, msgcontent, date);
+    window.alert("Thank you!! We will get back to you soon!");
+}
+
+const saveContent = (name, email, msgcontent, currentDate)=>{
+    var newContactForm = contactFormDB.push();
+    newContactForm.set({
+        name : name,
+        email : email,
+        msgcontent : msgcontent,
+        date : currentDate
     });
 }

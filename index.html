@@ -281,11 +281,11 @@
                     </ul>
                 </div>
                 <div class="contact-col">
-                    <form action="mailto:sriramsanthosh80@gmail.com" method="post" enctype="text/plain">
+                    <form action="/" method="post" class="input-form">
                         <ul class="no-label contact-list" style="margin-left: 0px;">
-                            <li class="contact-item"><input class="input" id="Name" name="Name" type="text" placeholder="Your Name" required></li>
-                            <li class="contact-item"><input class="input" id="Email" name="Email" type="email" placeholder="Your Email" required></li>
-                            <li class="contact-item"><textarea class="input" name="Message" id="message" cols="20" rows="4" placeholder="Message" required style="margin-left: 0px;"></textarea></li>
+                            <li class="contact-item"><input class="input" id="name" name="name" type="text" placeholder="Your Name *" required></li>
+                            <li class="contact-item"><input class="input" id="email" name="email" type="email" placeholder="Your Email *" required></li>
+                            <li class="contact-item"><textarea class="input" name="message" id="message" cols="20" rows="4" placeholder="Message Here *" required style="margin-left: 0px;"></textarea></li>
                             <li class="contact-button text-center"><input type="submit" class="send-message-button text-center" value="Send Message"></li>
                         </ul>
                     </form>
@@ -296,8 +296,9 @@
             </div>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0FHG91R1PY"></script>
     <script src="script.js"></script>
-
 </body>
 
 </html>
