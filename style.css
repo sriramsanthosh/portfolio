@@ -254,7 +254,13 @@ section:nth-child(2n+1){
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    /* background-color: red; */
+    background: url("images/skills-background.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .skill-progress{
@@ -278,57 +284,53 @@ section:nth-child(2n+1){
     font-size: large;
 }
 
-/* ============== Percentage Classes ================== */
 
-.eighty-five-percent{
-    width: 85%;
-    height: inherit;
-}
-
-.eighty-percent{
-    width: 80%;
-    height: inherit;
-}
-
-.seventy-five-percent{
-    width: 75%;
-    height: inherit;
-}
-.seventy-percent{
-    width: 70%;
-    height: inherit;
-}
-
-.fourty-five-percent{
-    width: 45%;
-    height: inherit;
-}
-
-.sixty-percent{
-    width: 60%;
-    height: inherit;
-}
-.sixty-five-percent{
-    width: 65%;
-    height: inherit;
-}
 
 /* ====================== Colour classes ================================= */
 
 .bg-blue{
     background-color: #2857a4;
+    width: 0;
 }
 
 .bg-orange{
     background-color: #ec4d1c;
+    width: 0;
 }
 
 .bg-light-purple{
     background-color: #93738c;
+    width: 0;
 }
 
 .bg-teal{
     background-color: teal;
+    width: 0;
+}
+
+.bg-dark-cyan{
+    background-color: darkred;
+    width: 0;
+}
+
+.bg-dark-khaki{
+    background-color: darkolivegreen;
+    width: 0;
+}
+
+.bg-slate-blue{
+    background-color: slateblue;
+    width: 0;
+}
+
+.bg-crimson{
+    background-color: crimson;
+    width: 0;
+}
+
+.bg-hot-pink{
+    background-color: darkkhaki;
+    width: 0;
 }
 
 /*=========================================================== Education Section =============================================================== */

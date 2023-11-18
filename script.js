@@ -46,6 +46,53 @@ for(let k = 0; k<temp4.length; k++){
     });
 }
 
+
+
+var skillContainer = document.querySelector("#skills");
+var educationContainer = document.querySelector("#education");
+
+var animationDone = false;
+
+
+var progressBars = document.querySelectorAll(".progress-bar");
+
+
+window.addEventListener('scroll', function(){
+    checkScroll();
+});
+
+
+
+
+function fillBars(){
+
+    for(let bars of progressBars){
+        let targetWidth = bars.getAttribute('container-width');
+        let currentWidth  = 0;
+        let interval = setInterval(() => {
+            if(currentWidth> targetWidth){
+                clearInterval(interval);
+                return;
+            }
+            currentWidth++;
+            bars.style.width = currentWidth+'%';
+        }, 10);
+    }
+}
+let educationHeight = educationContainer.getBoundingClientRect().y;
+let skillHeight = skillContainer.getBoundingClientRect().y;
+
+function checkScroll(){
+    if(!animationDone && skillHeight < window.scrollY){
+        animationDone = true;
+        fillBars();
+    }
+    if(animationDone && skillHeight>window.scrollY){
+        animationDone = false;
+    }
+}
+
+
 // g tag
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
