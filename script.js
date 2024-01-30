@@ -155,7 +155,7 @@ const saveContent = (name, email, msgcontent, currentDate)=>{
         Body : msgbody2
     })
     .then(
-      message => alert("Thank you!! I will get back to you soon! Please check your inbox (as well as in spam box) for my message")
+      message => alert("Thank you!! I will get back to you soon! Please check your inbox (spamBox as well) for my message")
     );
 }
 
