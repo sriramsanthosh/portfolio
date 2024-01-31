@@ -4,6 +4,12 @@ let i = 0;
 getphoto.style.transition = '0.9s';
 headerbg.style.transition = '0.9s';
 
+var preloader = document.querySelector('.loader');
+
+window.addEventListener('load', function(){
+    preloader.style.display = 'none';
+});
+
 var temp = setInterval(function(){
     switch(i){
         case 0:
