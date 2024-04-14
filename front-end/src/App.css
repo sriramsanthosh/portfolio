@@ -1,0 +1,72 @@
+.antTab:hover{
+  color: red;
+}
+
+.profile{
+  transition: 0.8s ease-in-out;
+  margin-top: -100%;
+  visibility: hidden;
+}
+
+.profile:hover{
+  cursor: pointer;
+}
+
+.input-box{
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #2A2A2B;
+  padding: 5px;
+  margin: 2px 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bi-send{
+  transform: rotate(45deg);
+}
+
+.input-box:focus{
+  outline: none;
+}
+
+.project-img{
+  width: 200px;
+  height: 330px;
+}
+
+.project-card:hover{
+  transform: translateY(-25px);
+  cursor: pointer;
+}
+
+.canvas-2{
+  width: 85%;
+  border: 2px solid #2A2A2B;
+  border-top: "none" 
+}
+
+.github-card{
+  transition: ease-in-out 0.2s;
+}
+
+.github-card:hover{
+  transform: translateY(-25px);
+  background-color: #202022;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1041px){
+  .contact-container{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width:569px){
+  .canvas-2{
+    width: 100%;
+    border: none;
+  }
+}
