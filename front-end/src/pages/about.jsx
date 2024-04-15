@@ -2,11 +2,9 @@
 const About = () => {
     return (
         <div>
-
             <div>
-                Kadapa  Agartala
+                Kadapa -- Agartala
             </div>
-
         </div>
     )
 }

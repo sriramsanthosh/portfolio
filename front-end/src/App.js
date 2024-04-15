@@ -14,7 +14,6 @@ function App() {
     <div>
       <BrowserRouter>
         <NavBar />
-
         <div className='canvas-2' style={{zIndex:"5", color: "#E4E4E7", margin: "auto", backgroundColor: "#18181B", padding: "0 30px", paddingTop: "100px", borderTop:"0"}}>
           <Routes>
             <Route exact path='/' element={<Home />} />
@@ -22,10 +21,7 @@ function App() {
             <Route exact path="/projects" element={<Projects />} />
             <Route exact path="/contact-me" element={<Contact />} />
           </Routes>
-
-
         </div>
-
         <Footer />
       </BrowserRouter>
 

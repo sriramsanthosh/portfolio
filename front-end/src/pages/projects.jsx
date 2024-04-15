@@ -19,46 +19,7 @@ const Projects = () => {
 
   });
 
-
-  let projectsData = [
-    {
-      id:"mind-mirror",
-      name: "Mind Mirror",
-      githubLink: "https://github.com/sriramsanthosh/mind-mirror",
-      websiteLink: "https://mind-mirror-client.vercel.app/",
-      photo: "mind-mirror",
-      description:"Your new favourite 📔 Personal Diary. Find the true love of your life today."
-    },
-    {
-      id:"project-anonymous",
-      name: "Anonymous",
-      githubLink: "https://github.com/sriramsanthosh/project-anonymous",
-      websiteLink: "https://project-anonymous.vercel.app/",
-      photo: "anonymous",
-      description:"Best platform to share anyone's opinion on any topic anonymously"
-    },
-    {
-      id:"weather-app",
-      name: "WeatherApp",
-      githubLink: "https://github.com/sriramsanthosh/weather-app",
-      websiteLink: "https://weather-app-sriramsanthoshs-projects.vercel.app/",
-      photo: "weather-app",
-      description:"Get weather details at any 🌆 city"
-    },
-    {
-      id: "sriram-foundation",
-      name: "Sriram Foundation",
-      githubLink: "https://github.com/sriramsanthosh/sriram-foundation",
-      websiteLink: "https://sriramsanthosh.github.io/sriram-foundation/",
-      photo: "sriram-foundation",
-      description:"This is a front-end website integrated with payment platform that accepts the payments for making donation."
-    }
-  ]
-
-
   return (
-
-
     <div>
       <h1 className="protest-riot-regular" style={{ fontSize: "40px", textAlign: "center", margin:"30px 0" }}><span style={{ color: "crimson" }}>Th</span>ings I’ve made trying to put my dent in the <span style={{ color: "crimson" }}>universe.</span></h1>
       
@@ -88,21 +49,6 @@ const Projects = () => {
       }
 
 <h1 className="protest-riot-regular" style={{ fontSize: "40px", textAlign: "center", margin:"30px 0" }}><span style={{ color: "crimson" }}>Pro</span>jects<span style={{ backgroundColor: "#6C6C6D", borderRadius: '2px', color: "#323232" }}>&nbsp;</span></h1>
-
-      {/* <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap', justifyContent: 'center', margin:"20px auto" }}>
-        {projectsData.map((project, index) => {
-          return (
-            <NavLink to={project.websiteLink} target="_blank" style={{ textDecoration: "none", color: "inherit" }} >
-              <div id={index} style={{ textAlign: "center", padding: "", margin: '15px 5px', transition: "ease-in-out 0.2s" }} className="project-card">
-                <img src={require(`../images/project/${project.photo}.png`)} className="project-img" style={{ border: "2px solid #2A2A2B", borderRadius: "15px" }} />
-                <p className="ubuntu-regular">{project.name}</p>
-              </div>
-            </NavLink>
-
-          )
-        })}
-      </div > */}
-
 
       <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap', justifyContent: 'center', margin:"20px auto" }}>
         {projectsData.map((project, index) => {
@@ -134,27 +80,48 @@ const Projects = () => {
         </div>
       </div>
 
-            // <NavLink to={project.websiteLink} target="_blank" style={{ textDecoration: "none", color: "inherit" }} >
-            //   <div id={index} style={{ textAlign: "center", padding: "", margin: '15px 5px', transition: "ease-in-out 0.2s" }} className="project-card">
-            //     <img src={require(`../images/project/${project.photo}.png`)} className="project-img" style={{ border: "2px solid #2A2A2B", borderRadius: "15px" }} />
-            //     <p className="ubuntu-regular">{project.name}</p>
-            //   </div>
-            // </NavLink>
-
           )
         })}
       </div >
-      
-
-
-
-
-      
-
-
     </div>
 
   );
 }
+
+
+let projectsData = [
+  {
+    id:"mind-mirror",
+    name: "Mind Mirror",
+    githubLink: "https://github.com/sriramsanthosh/mind-mirror",
+    websiteLink: "https://mind-mirror-client.vercel.app/",
+    photo: "mind-mirror",
+    description:"Your new favourite 📔 Personal Diary. Find the true love of your life today."
+  },
+  {
+    id:"project-anonymous",
+    name: "Anonymous",
+    githubLink: "https://github.com/sriramsanthosh/project-anonymous",
+    websiteLink: "https://project-anonymous.vercel.app/",
+    photo: "anonymous",
+    description:"Best platform to share anyone's opinion on any topic anonymously"
+  },
+  {
+    id:"weather-app",
+    name: "WeatherApp",
+    githubLink: "https://github.com/sriramsanthosh/weather-app",
+    websiteLink: "https://weather-app-sriramsanthoshs-projects.vercel.app/",
+    photo: "weather-app",
+    description:"Get weather details at any 🌆 city"
+  },
+  {
+    id: "sriram-foundation",
+    name: "Sriram Foundation",
+    githubLink: "https://github.com/sriramsanthosh/sriram-foundation",
+    websiteLink: "https://sriramsanthosh.github.io/sriram-foundation/",
+    photo: "sriram-foundation",
+    description:"This is a front-end website integrated with payment platform that accepts the payments for making donation."
+  }
+]
 
 export default Projects;
