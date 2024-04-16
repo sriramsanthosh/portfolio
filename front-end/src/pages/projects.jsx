@@ -8,13 +8,20 @@ const Projects = () => {
   const [userData, setUserData] = useState(false);
 
   useEffect(() => {
-    console.log(UserData);
+    // console.log(UserData);
 
     if(!UserData){
-      Axios.get("http://localhost:8000/").then(async(res)=>{
-        console.log(res.data);
-        await setUserDatas(await res.data.UserData);
-      });
+      try{
+        Axios.post("http://localhost:8000/").then(async(res)=>{
+          // console.log(res.data);
+          await setUserDatas(await res.data.UserData);
+        }).catch((err)=>{
+          console.error('Connection Error!')
+        });
+      }
+      catch(err){
+        console.error("Connection Error!");
+      }
     }
     else{
       setUserData(true);
@@ -37,8 +44,8 @@ const Projects = () => {
             
           </div>
           
-          <div style={{position:"relative", width: "100%", textAlign: "right", padding: "10px" }}>
-            <img src={UserData.avatar_url} style={{ borderRadius: "20px", width: "150px" }} alt="" />
+          <div style={{position:"relative", width: "fit-content", textAlign: "right", padding: "10px" }}>
+            <img className="github-avatar" src={UserData.avatar_url} alt="github-avatar" />
             <p style={{position:"absolute", right:'0', bottom:"0"}}><i className="fa-brands fa-github" style={{  color: "grey", fontSize: "25px"}}></i></p>
           </div>
         </div>
@@ -57,7 +64,7 @@ const Projects = () => {
         {projectsData.map((project, index) => {
           return (
 
-            <div className="github-card" style={{ position:"relative",border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", width:"350px", margin:"20px auto", marginTop:"40px" }}>
+            <div key={index} className="github-card" style={{ position:"relative",border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", width:"350px", margin:"20px auto", marginTop:"40px" }}>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
           <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
             {userData && <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}/{project.id}</p>}

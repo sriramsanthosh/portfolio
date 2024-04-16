@@ -1,10 +1,7 @@
 import Button from '@mui/material/Button';
 import { LoadingButton } from '@mui/lab';
-import SendSVG from "../images/send.svg";
-// import '../mailer';
 import { useState } from 'react';
 import Axios from "axios";
-
 const Contact = () => {
 
     const [submit, setsubmit] = useState(false);
@@ -19,15 +16,14 @@ const Contact = () => {
             message: e.target.message.value
         }
         await Axios.post("http://localhost:8000/send-mail", data).then((res)=>{
-            console.log(res.data);
+            // console.log(res.data);
             let contactForm = document.getElementById("contact-form");
             alert(res.data.message);
             if(res.status === 200){
                 contactForm.reset();
             }
-            
         }).catch((err)=>{
-            console.error(err);
+            // console.error(err);
             alert("Connection Error! Try Again");
         });
         setsubmit(false);

@@ -12,9 +12,6 @@ const octokit = new Octokit({
   auth: process.env.GIT_TOKEN
 });
 
-
-
-
 router.post("/send-mail", async (req, res) => {
     let data= req.body;
     let bodyofEmail= `<div style='font-size:large; font-family: sans-serif'>
@@ -69,8 +66,13 @@ router.post("/send-hiring-mail", async (req, res) => {
     }
 });
 
+router.get('/', (req, res)=>{
+    res.status(200).json({ 
+        message: "This Server is Running!",
+    });
+});
 
-router.get("/", async(req, res) => {
+router.post("/", async(req, res) => {
     try {
         UserData = await octokit.request("GET /users/{username}", {
           username: username
@@ -81,6 +83,9 @@ router.get("/", async(req, res) => {
         });
       } catch (error) {
         console.error(`Error! Status: ${error.status}. Message: ${error.response.data.message}`);
+        res.status(200).json({ 
+            message: "This Server is Running!",
+        });
       }
       
 });

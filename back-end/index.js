@@ -9,7 +9,7 @@ const port = process.env.port || 8000;
 app.use(express.json({ extended: false }));
 app.use(cors());
 
-// const db = require('./config/db');
+const db = require('./config/db');
 
 app.use("/", require("./routes/index"));
 

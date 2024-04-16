@@ -50,8 +50,6 @@ export default function FormDialog() {
               message: formJson.message
             }
             await Axios.post("http://localhost:8000/send-hiring-mail", data).then((res)=>{
-              
-              console.log(res.data);
               if(res.status === 200){
                 setSuccess(true);
               }

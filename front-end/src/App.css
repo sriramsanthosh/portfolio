@@ -5,13 +5,12 @@
 
 .navbar-back{
   width: 83%;
+  background-color: #18181B;
 
 }
 
 .profile{
-  transition: 0.8s ease-in-out;
-  margin-top: -100%;
-  visibility: hidden;
+  /* transition: 0.8s ease-in-out; */
   width : 500px;
 }
 
@@ -88,7 +87,9 @@
 .btech-degree{
   background:url("./images/letter2.png");
   background-position: center;
-  max-width: 500px;
+  /* max-width: 500px; */
+  width: 100%;
+  /* padding: 170px auto; */
   height: 350px;
   left: 0;
   right: 0px;
@@ -151,6 +152,34 @@
   border-top: 0;
 }
 
+.about-nitian div{
+  width: 50%;
+}
+
+.about-nitian-top-text{
+  visibility: hidden;
+  display: none;
+  /* margin-top: px; */
+}
+
+.patta-name-1{
+  font-size: 60px;
+}
+
+.patta-name-2{
+  margin-left: 400px;
+  line-height: 10px;
+}
+
+.github-avatar{
+  width: 150px;
+  border-radius: 5px;
+}
+
+.dp-img{
+  width: 300px;
+}
+
 @media screen and (max-width:1041px){
   .contact-container{
     flex-wrap: wrap;
@@ -182,7 +211,6 @@
     width: 100%;
     border: none;
   }
-
   .navbar-back{
     width: 100%;
     z-index: 50;
@@ -195,6 +223,27 @@
   }
   
 }
+@media screen and (max-width:923px){
+  .about-nitian{
+    flex-wrap: wrap-reverse;
+  }
+  .about-nitian div{
+    width: 100%;
+  }
+  .about-nitian-top-text{
+    display: contents;
+    visibility: visible;
+  }
+  .about-nitian-bottom-text{
+    visibility: hidden;
+    display: none;
+  }
+
+  .bottom-hire{
+    text-align: center;
+  }
+
+}
 @media screen and (max-width:558px){
   .profile{
     width: 300px;
@@ -205,9 +254,35 @@
   } */
 
 }
+
+@media screen and (max-width:541px){
+  .patta-name-1{
+    font-size: 60px;
+  }
+  .patta-name-2{
+    margin-left: 300px;
+    margin-left: 0;
+  }
+
+  .dp-img{
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:502px){
+  .github-avatar{
+    width: 80px;
+  }
+}
+
 @media screen and (max-width:448px){
   .contact-img{
     padding: 170px 0;
+  }
+}
+@media screen and (max-width:448px){
+  .dp-img{
+    width: 250px;
   }
 }
 @media screen and (max-width:399px){
@@ -221,6 +296,10 @@
     background-color: #18181b;
   }  
 
+  .github-avatar{
+    width: 50px;
+  }
+  
   .navbar-back{
     /* background-color: transparent; */
     top: auto;
@@ -229,9 +308,16 @@
     width: 100%;
     bottom: 0;
   }
-
+  
   .main-content-container{
     padding-top: 20px;
   }
+  
+}
 
+
+@media screen and (max-width:345px){
+  .dp-img{
+    width: 220px;
+  }
 }
