@@ -1,41 +1,44 @@
 import { NavLink } from "react-router-dom"
-import { UserData } from "../github";
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
+import Axios from "axios";
 
 const Projects = () => {
-
+  const [UserData, setUserDatas] = useState();
   const [userData, setUserData] = useState(false);
+
   useEffect(() => {
+    console.log(UserData);
 
-    if (!UserData) {
-      setUserData(false);
-      console.log("1", UserData);
+    if(!UserData){
+      Axios.get("http://localhost:8000/").then(async(res)=>{
+        console.log(res.data);
+        await setUserDatas(await res.data.UserData);
+      });
     }
-    else {
+    else{
       setUserData(true);
-      console.log(UserData);
     }
 
-  });
+  }, [UserData]);
 
   return (
     <div>
       <h1 className="protest-riot-regular" style={{ fontSize: "40px", textAlign: "center", margin:"30px 0" }}><span style={{ color: "crimson" }}>Th</span>ings I’ve made trying to put my dent in the <span style={{ color: "crimson" }}>universe.</span></h1>
       
-      {UserData && <div className="github-card" style={{ border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", maxWidth:"500px", margin:"20px auto", marginTop:"40px" }}>
+      {userData && <div className="github-card" style={{ border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", maxWidth:"500px", margin:"20px auto", marginTop:"40px" }}>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
           <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
-            <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.data.login}</p>
-            <p><i className="fa-solid fa-book-bookmark"></i> Repositories <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.data.public_repos}&nbsp;</span></p>
-            <p><i className="fa-solid fa-users"></i> Followers <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.data.followers}&nbsp;</span></p>
-            <p><i className="fa-solid fa-location-dot"></i> {UserData.data.location}</p>
-            <p><NavLink to={UserData.data.html_url} target="_blank"><Button variant="outlined" color="error">Follow Me</Button></NavLink></p>
+            <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}</p>
+            <p><i className="fa-solid fa-book-bookmark"></i> Repositories <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.public_repos}&nbsp;</span></p>
+            <p><i className="fa-solid fa-users"></i> Followers <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.followers}&nbsp;</span></p>
+            <p><i className="fa-solid fa-location-dot"></i> {UserData.location}</p>
+            <p><NavLink to={UserData.html_url} target="_blank"><Button variant="outlined" color="error">Follow Me</Button></NavLink></p>
             
           </div>
           
           <div style={{position:"relative", width: "100%", textAlign: "right", padding: "10px" }}>
-            <img src={UserData.data.avatar_url} style={{ borderRadius: "20px", width: "150px" }} alt="" />
+            <img src={UserData.avatar_url} style={{ borderRadius: "20px", width: "150px" }} alt="" />
             <p style={{position:"absolute", right:'0', bottom:"0"}}><i className="fa-brands fa-github" style={{  color: "grey", fontSize: "25px"}}></i></p>
           </div>
         </div>
@@ -57,7 +60,7 @@ const Projects = () => {
             <div className="github-card" style={{ position:"relative",border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", width:"350px", margin:"20px auto", marginTop:"40px" }}>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
           <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
-            <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.data.login}/{project.id}</p>
+            {userData && <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}/{project.id}</p>}
             <p style={{textAlign:"left"}}>{project.description}</p>
             <p><NavLink to={project.githubLink} target="_blank"><Button variant="outlined" color="success">Repo</Button></NavLink> &nbsp;
             <NavLink to={project.websiteLink} target="_blank"><Button variant="outlined" color="error">Deployment</Button></NavLink></p>
