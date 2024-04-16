@@ -14,7 +14,7 @@ function App() {
     <div>
       <BrowserRouter>
         <NavBar />
-        <div className='canvas-2' style={{zIndex:"5", color: "#E4E4E7", margin: "auto", backgroundColor: "#18181B", padding: "0 30px", paddingTop: "100px", borderTop:"0"}}>
+        <div className='canvas-2 main-content-container'>
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route exact path="/about" element={<About />} />

@@ -5,7 +5,6 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { Navigate, useNavigate } from "react-router-dom";
 
-
 const AntTabs = styled(Tabs)({
     borderBottom: '1px solid #e8e8e8',
     '& .MuiTabs-indicator': {
@@ -91,12 +90,12 @@ export default function CustomizedTabs() {
     const Navigate = useNavigate();
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', margin:"auto", width:"fit-content", backgroundColor:"#252529", padding:"0 20px", borderRadius:"80px", position:"fixed",top:"15px", left:"0", right:"0", zIndex:"100", border:"1px solid #303032", }} >
+        <Box className="navbar-box" >
                 <AntTabs value={value} style={{ border: "none" }} onChange={handleChange} aria-label="ant example" >
                     <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/") }} label="Home" style={antTabStyle} />
                     <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/about") }} label="About" style={antTabStyle} />
                     <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/projects") }} label="Projects" style={antTabStyle} />
-                    <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/contact-me") }} label="Contact" style={antTabStyle} />
+                    <AntTab className="antTab contact-tab" onClick={(e) => { e.preventDefault(); Navigate("/contact-me") }} label="Contact" style={antTabStyle} />
                 </AntTabs>
         </Box>
     );
