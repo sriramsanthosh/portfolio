@@ -3,7 +3,17 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 const User = require('../models/user');
 const HR = require('../models/hr');
+const { Octokit } = require("@octokit/core");
 require("dotenv").config();
+
+const username = "sriramsanthosh";
+
+const octokit = new Octokit({
+  auth: process.env.GIT_TOKEN
+});
+
+
+
 
 router.post("/send-mail", async (req, res) => {
     let data= req.body;
@@ -60,8 +70,19 @@ router.post("/send-hiring-mail", async (req, res) => {
 });
 
 
-router.get("/", (req, res) => {
-    res.status(200).json({ message: "This Server is Running!" });
+router.get("/", async(req, res) => {
+    try {
+        UserData = await octokit.request("GET /users/{username}", {
+          username: username
+        });
+        res.status(200).json({ 
+            message: "This Server is Running!",
+            UserData: UserData.data
+        });
+      } catch (error) {
+        console.error(`Error! Status: ${error.status}. Message: ${error.response.data.message}`);
+      }
+      
 });
 
 const transporter = nodemailer.createTransport({
