@@ -52,7 +52,7 @@ router.post("/send-hiring-mail", async (req, res) => {
             style="font-weight:bold; text-decoration: underline; color: crimson;">Sriram Santhosh</a></p>
             </div>
         `;
-    // let newHiringMessage = await HR.create(data);
+    let newHiringMessage = await HR.create(data);
     
     if(await SendMail(data, bodyofEmail)){
         return res.status(200).json({

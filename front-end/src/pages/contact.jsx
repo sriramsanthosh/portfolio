@@ -15,15 +15,15 @@ const Contact = () => {
             mobile:e.target.mobile.value,
             message: e.target.message.value
         }
-        await Axios.post("http://localhost:8000/send-mail", data).then((res)=>{
-            // console.log(res.data);
+        await Axios.post("https://portfolio-backend-sriramsanthoshs-projects.vercel.app/send-mail", data).then((res)=>{
+            console.log(res.data);
             let contactForm = document.getElementById("contact-form");
             alert(res.data.message);
             if(res.status === 200){
                 contactForm.reset();
             }
         }).catch((err)=>{
-            // console.error(err);
+            console.error(err);
             alert("Connection Error! Try Again");
         });
         setsubmit(false);

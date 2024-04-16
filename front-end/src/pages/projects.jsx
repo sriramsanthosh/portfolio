@@ -12,7 +12,7 @@ const Projects = () => {
 
     if(!UserData){
       try{
-        Axios.post("http://localhost:8000/").then(async(res)=>{
+        Axios.post("https://portfolio-backend-sriramsanthoshs-projects.vercel.app/").then(async(res)=>{
           // console.log(res.data);
           await setUserDatas(await res.data.UserData);
         }).catch((err)=>{
