@@ -33,7 +33,7 @@ const Projects = () => {
     <div>
       <h1 className="protest-riot-regular" style={{ fontSize: "40px", textAlign: "center", margin:"30px 0" }}><span style={{ color: "crimson" }}>Th</span>ings I’ve made trying to put my dent in the <span style={{ color: "crimson" }}>universe.</span></h1>
       
-      {userData && <div className="github-card" style={{ border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", maxWidth:"500px", margin:"20px auto", marginTop:"40px" }}>
+      {userData && <div className="github-card" style={{ border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", maxWidth:"500px", margin:"40px auto", marginBottom:"0" }}>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
           <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
             <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}</p>
