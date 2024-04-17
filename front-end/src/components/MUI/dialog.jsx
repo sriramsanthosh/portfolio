@@ -49,7 +49,7 @@ export default function FormDialog() {
               company: formJson.company,
               message: formJson.message
             }
-            await Axios.post("https://portfolio-backend-sriramsanthoshs-projects.vercel.app/send-hiring-mail", data).then((res)=>{
+            await Axios.post("https://cheerful-red-cormorant.cyclic.app/send-hiring-mail", data).then((res)=>{
               if(res.status === 200){
                 setSuccess(true);
               }

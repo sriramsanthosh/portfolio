@@ -1,13 +1,9 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import SocialAccounts from "../components/social-media";
 import Button from '@mui/material/Button';
 import FormDialog from "../components/MUI/dialog";
 
 const About = () => {
-
-    const handleHireMe = async (e) => {
-        e.preventDefault();
-    }
 
     let matter = "I am an Electronics student at 🏫 NIT Agartala. I live in Kadapa, Andhra Prdesh. I love using 🧑‍💻 Software as a solution for every problem. Currently, I’m a 🧑‍🎓 final-year student & open for an intern or a new job opportunity. I interested in learning 🤓 new things."
 

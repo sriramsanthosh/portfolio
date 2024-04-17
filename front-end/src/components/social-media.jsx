@@ -1,8 +1,7 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 
 const SocialAccounts = () => {
-    const Navigate = useNavigate();
     return (
         <div>
             <NavLink style={{textDecoration:"none", color:"#AAAAB2"}} to="https://twitter.com/sriramsanthosh_" target="_blank"><i style={{paddingLeft:"0"}} className="social-media-icon fa-brands fa-x-twitter"></i></NavLink>

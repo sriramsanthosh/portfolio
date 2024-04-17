@@ -15,7 +15,7 @@ const Contact = () => {
             mobile:e.target.mobile.value,
             message: e.target.message.value
         }
-        await Axios.post("https://portfolio-backend-sriramsanthoshs-projects.vercel.app/send-mail", data).then((res)=>{
+        await Axios.post("https://cheerful-red-cormorant.cyclic.app/send-mail", data).then((res)=>{
             console.log(res.data);
             let contactForm = document.getElementById("contact-form");
             alert(res.data.message);
@@ -37,7 +37,7 @@ const Contact = () => {
             <div className="contact-img">
 
             </div>
-            <form id='contact-form' onSubmit={handleContactForm} style={{width:"100%", marginTop:"30px"}}>
+            <form id='contact-form' onSubmit={handleContactForm} style={{width:"100%", marginTop:"30px", marginBottom:"12px"}}>
                 <h2 style={{margin:"10px 0"}} className='protest-riot-regular'>Get in <span style={{color:"crimson"}}>Touch</span></h2>
                 <p className='ubuntu-regular' style={{margin:"10px 0", fontSize:"18px"}}>Hey there! You want me to work with you? Thats really the spirit I am looking for. Drop a message here.</p>
                 <input className='ubuntu-regular input-box' type="text" name="name" id="name" placeholder="Name*" /><br />

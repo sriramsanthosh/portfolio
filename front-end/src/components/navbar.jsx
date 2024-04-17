@@ -1,9 +1,4 @@
-
-import { NavLink } from "react-router-dom";
-import CenteredTabs from "./MUI/tab";
 import CustomizedTabs from "./MUI/tab";
-import SocialAccounts from "./social-media";
-
 
 const NavBar = () => {
 

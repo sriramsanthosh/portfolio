@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
 import Axios from "axios";
+import CircularIndeterminate from "../components/MUI/circular-loader";
 
 const Projects = () => {
   const [UserData, setUserDatas] = useState();
@@ -12,7 +13,7 @@ const Projects = () => {
 
     if(!UserData){
       try{
-        Axios.post("https://portfolio-backend-sriramsanthoshs-projects.vercel.app/").then(async(res)=>{
+        Axios.post("https://cheerful-red-cormorant.cyclic.app/").then(async(res)=>{
           // console.log(res.data);
           await setUserDatas(await res.data.UserData);
         }).catch((err)=>{
@@ -33,19 +34,19 @@ const Projects = () => {
     <div>
       <h1 className="protest-riot-regular" style={{ fontSize: "40px", textAlign: "center", margin:"30px 0" }}><span style={{ color: "crimson" }}>Th</span>ings I’ve made trying to put my dent in the <span style={{ color: "crimson" }}>universe.</span></h1>
       
-      {userData && <div className="github-card" style={{ border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", maxWidth:"500px", margin:"40px auto", marginBottom:"0" }}>
-        <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
-          <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
+      <div className="github-card" style={{ border: "2px solid #2A2A2B", borderRadius: "5px",   padding: "10px 10px", maxWidth:"500px", margin:"40px auto", marginBottom:"0" }}>
+        <div style={{ display: "flex", minHeight:"220px", justifyContent: "center", width: "100%", alignContent: "space-between", position:"relative" }}>
+            {!userData && <CircularIndeterminate />}
+          {userData && <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
             <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}</p>
             <p><i className="fa-solid fa-book-bookmark"></i> Repositories <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.public_repos}&nbsp;</span></p>
-            <p><i className="fa-solid fa-users"></i> Followers <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.followers}&nbsp;</span></p>
+            <p><i className="fa-solid fa-users"></i> Followers {userData && <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.followers}&nbsp;</span>}</p>
             <p><i className="fa-solid fa-location-dot"></i> {UserData.location}</p>
             <p><NavLink to={UserData.html_url} target="_blank"><Button variant="outlined" color="error">Follow Me</Button></NavLink></p>
-            
-          </div>
+          </div>}
           
           <div style={{position:"relative", width: "fit-content", textAlign: "right", padding: "10px" }}>
-            <img className="github-avatar" src={UserData.avatar_url} alt="github-avatar" />
+            {userData && <img className="github-avatar" src={UserData.avatar_url} alt="github-avatar" />}
             <p style={{position:"absolute", right:'0', bottom:"0"}}><i className="fa-brands fa-github" style={{  color: "grey", fontSize: "25px"}}></i></p>
           </div>
         </div>
@@ -56,11 +57,11 @@ const Projects = () => {
           <div style={{ width: "25%", background: "#F1E05A", height: "10px", borderTopRightRadius:"5px", borderBottomRightRadius:"5px" }}></div>
         </div>
       </div>
-      }
+      
 
 <h1 className="protest-riot-regular" style={{ fontSize: "40px", textAlign: "center", margin:"30px 0" }}><span style={{ color: "crimson" }}>Pro</span>jects<span style={{ backgroundColor: "#6C6C6D", borderRadius: '2px', color: "#323232" }}>&nbsp;</span></h1>
 
-      <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap', justifyContent: 'center', margin:"20px auto" }}>
+      <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap', justifyContent: 'center', margin:"20px auto", marginBottom:"0" }}>
         {projectsData.map((project, index) => {
           return (
 
