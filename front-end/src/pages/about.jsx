@@ -30,7 +30,7 @@ const About = () => {
                             <SocialAccounts />
                             <p style={{ marginTop: "10px" }}>
                                 <FormDialog />
-                                &nbsp; <NavLink to="https://wa.me/7815980132" target="_blank" text="Hello Sriram! Your portfolio caught my eye, and I'm interested in connecting with you."><Button type='submit' variant="outlined" color="error">Ping Me &nbsp; <i className="fa-brands fa-whatsapp"></i></Button></NavLink>
+                                &nbsp; <NavLink to="https://wa.me/7815980132?text=Hi%20Sriram!%20I%20like%20your%20portfolio%20and%20want%20to%20get%20connected%20with%20you" target="_blank" text="I'm%20interested%20in%20your%20car%20for%20sale"><Button type='submit' variant="outlined" color="error">Ping Me &nbsp; <i className="fa-brands fa-whatsapp"></i></Button></NavLink>
                             </p>
                         </div>
                     </div>
