@@ -8,7 +8,8 @@ import About from './pages/about';
 import Projects from './pages/projects';
 
 function App() {
-  
+
+
   return (
     <div>
       <BrowserRouter>

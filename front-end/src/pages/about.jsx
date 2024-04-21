@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import SocialAccounts from "../components/social-media";
 import Button from '@mui/material/Button';
 import FormDialog from "../components/MUI/dialog";
@@ -30,13 +30,13 @@ const About = () => {
                             <SocialAccounts />
                             <p style={{ marginTop: "10px" }}>
                                 <FormDialog />
-                                &nbsp; <Button type='submit' variant="outlined" color="error" onClick={(e) => { e.preventDefault(); Navigate('/contact-me'); }}>Contact Me</Button>
+                                &nbsp; <NavLink to="https://wa.me/7815980132" target="_blank" text="Hello Sriram! Your portfolio caught my eye, and I'm interested in connecting with you."><Button type='submit' variant="outlined" color="error">Ping Me &nbsp; <i className="fa-brands fa-whatsapp"></i></Button></NavLink>
                             </p>
                         </div>
                     </div>
 
                     <div className="text-center" style={{ padding: "20px 30px", marginTop:'25px' }}>
-                        <img className="dp-img" src={require("../images/dp3.jpg")} alt="dp-3" style={{  rotate: "14deg", textAlign: "center", borderRadius: "2px" }} />
+                        <img className="dp-img" src={require("../images/dp3.png")} alt="dp-3" style={{  rotate: "14deg", textAlign: "center", borderRadius: "2px" }} />
                     </div>
                 </div>
 

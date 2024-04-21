@@ -3,12 +3,17 @@
   margin: 0
 }
 
+p{
+  font-size: 16px;
+}
+
 body{
   background-color: black;
   color : #E4E4E7;
   width: 100%;
   z-index: 5;
   overflow-x: hidden;
+  user-select: none;
 }
 
 .social-media-icon {
@@ -52,3 +57,4 @@ i:hover{
   font-weight: 400;
   font-style: normal;
 }
+

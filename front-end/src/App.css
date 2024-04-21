@@ -279,12 +279,11 @@
   .contact-img{
     padding: 170px 0;
   }
-}
-@media screen and (max-width:448px){
   .dp-img{
     width: 250px;
   }
 }
+
 @media screen and (max-width:399px){
   .navbar-box{
     border-radius: 0;

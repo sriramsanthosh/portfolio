@@ -1,33 +1,24 @@
 import { NavLink } from "react-router-dom"
 import { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-import Axios from "axios";
 import CircularIndeterminate from "../components/MUI/circular-loader";
+import {gitData} from "../github";
 
 const Projects = () => {
-  const [UserData, setUserDatas] = useState();
+  const [UserData, setUsersData] = useState(gitData);
   const [userData, setUserData] = useState(false);
 
   useEffect(() => {
-    // console.log(UserData);
-
-    if(!UserData){
-      try{
-        Axios.post("https://cheerful-red-cormorant.cyclic.app/").then(async(res)=>{
-          // console.log(res.data);
-          await setUserDatas(await res.data.UserData);
-        }).catch((err)=>{
-          console.error('Connection Error!')
-        });
-      }
-      catch(err){
-        console.error("Connection Error!");
+    try{
+      if(gitData){
+        setUsersData(gitData);
+        setUserData(true);
       }
     }
-    else{
-      setUserData(true);
+    catch(err){
+      console.log("Error in getting data from github");
     }
-
+    
   }, [UserData]);
 
   return (

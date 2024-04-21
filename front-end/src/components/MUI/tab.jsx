@@ -93,8 +93,8 @@ export default function CustomizedTabs() {
         <Box className="navbar-box" >
                 <AntTabs value={value} style={{ border: "none" }} onChange={handleChange} aria-label="ant example" >
                     <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/") }} label="Home" style={antTabStyle} />
-                    <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/about") }} label="About" style={antTabStyle} />
-                    <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/projects") }} label="Projects" style={antTabStyle} />
+                    <AntTab className="antTab about-tab" onClick={(e) => { e.preventDefault(); Navigate("/about") }} label="About" style={antTabStyle} />
+                    <AntTab className="antTab projects-tab" onClick={(e) => { e.preventDefault(); Navigate("/projects") }} label="Projects" style={antTabStyle} />
                     <AntTab className="antTab contact-tab" onClick={(e) => { e.preventDefault(); Navigate("/contact-me") }} label="Contact" style={antTabStyle} />
                 </AntTabs>
         </Box>
