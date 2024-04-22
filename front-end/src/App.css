@@ -273,6 +273,7 @@
   .github-avatar{
     width: 80px;
   }
+  
 }
 
 @media screen and (max-width:448px){
@@ -281,6 +282,9 @@
   }
   .dp-img{
     width: 250px;
+  }
+  .banner-text{
+    font-size: 14px;
   }
 }
 

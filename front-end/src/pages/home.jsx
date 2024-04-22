@@ -27,7 +27,7 @@ const Home = () => {
                     <h1 className="pacifico-regular" style={{ fontSize: "80px" }}>Sriram Santhosh<span style={{ color: "crimson" }}>.</span></h1>
                     <h3 className="protest-riot-regular" style={{ fontSize: "35px" }}>I'm a <span style={{ color: "crimson" }}>Web</span> Developer.</h3>
                     </div>
-                    <p className="ubuntu-regular" style={{ marginTop: "10px", fontSize: "18px", margin: "20px 0" }}> My expertise lies in both front-end and back-end development, allowing me to deliver comprehensive solutions that meet diverse project needs.</p>
+                    <p className="ubuntu-regular banner-text" style={{ marginTop: "10px", fontSize: "18px", margin: "20px 0" }}> My expertise lies in both front-end and back-end development, allowing me to deliver comprehensive solutions that meet diverse project needs.</p>
                     <p className="ubuntu-regular">Follow me :</p>
                     <SocialAccounts />
                 </div>

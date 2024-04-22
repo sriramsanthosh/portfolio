@@ -29,10 +29,10 @@ const Projects = () => {
         <div style={{ display: "flex", minHeight:"220px", justifyContent: "center", width: "100%", alignContent: "space-between", position:"relative" }}>
             {!userData && <CircularIndeterminate />}
           {userData && <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
-            <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}</p>
-            <p><i className="fa-solid fa-book-bookmark"></i> Repositories <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.public_repos}&nbsp;</span></p>
-            <p><i className="fa-solid fa-users"></i> Followers {userData && <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.followers}&nbsp;</span>}</p>
-            <p><i className="fa-solid fa-location-dot"></i> {UserData.location}</p>
+            <p style={{marginTop:"30px",fontFamily:"sans-serif", fontWeight:"bold" }}>{UserData.login}</p>
+            <p className="ubuntu-regular"><i className="fa-solid fa-book-bookmark"></i> Repositories <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.public_repos}&nbsp;</span></p>
+            <p className="ubuntu-regular"><i className="fa-solid fa-users"></i> Followers {userData && <span style={{background:"#2D3139",color:"#E6EDF3", fontWeight:"bold", borderRadius:"15px"}}>&nbsp;{UserData.followers}&nbsp;</span>}</p>
+            <p className="ubuntu-regular"><i className="fa-solid fa-location-dot"></i> {UserData.location}</p>
             <p><NavLink to={UserData.html_url} target="_blank"><Button variant="outlined" color="error">Follow Me</Button></NavLink></p>
           </div>}
           
@@ -58,15 +58,15 @@ const Projects = () => {
 
             <div key={index} className="github-card" style={{ position:"relative",border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", width:"350px", margin:"20px auto", marginTop:"40px" }}>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
-          <div style={{ width: "100%", textAlign: 'left', paddingLeft:"20px" }}>
-            {userData && <p style={{marginTop:"30px", fontWeight:"bold" }}>{UserData.login}/{project.id}</p>}
-            <p style={{textAlign:"left"}}>{project.description}</p>
-            <p><NavLink to={project.githubLink} target="_blank"><Button variant="outlined" color="success">Repo</Button></NavLink> &nbsp;
+          <div style={{ textAlign: 'left', paddingLeft:"20px" }}>
+            {userData && <p style={{marginTop:"30px", fontWeight:"bold", fontFamily:"sans-serif" }}>{UserData.login}/{project.id}</p>}
+            <p className="ubuntu-regular" style={{textAlign:"left"}}>{project.description}</p>
+            <p className="ubuntu-regular"><NavLink to={project.githubLink} target="_blank"><Button variant="outlined" color="success">Repo</Button></NavLink> &nbsp;
             <NavLink to={project.websiteLink} target="_blank"><Button variant="outlined" color="error">Deployment</Button></NavLink></p>
             
           </div>
           
-          <div style={{ position:"relative", textAlign: "right", padding: "25px" }}>
+          <div style={{ position:"relative", textAlign: "right", padding: "22px" }}>
             <img src={require(`../images/project/${project.photo}.png`)} style={{ borderRadius: "20px",border:"1px solid gray",  background:"darkgray", marginTop:'20px', width: "40px", position:"absolute", right:'0', top:"0"}} alt="project-logo" /><br />
             <p style={{position:"absolute", right:'0', bottom:"0"}}><i className="fa-brands fa-github" style={{  color: "grey", fontSize: "25px"}}></i></p>
           </div>
