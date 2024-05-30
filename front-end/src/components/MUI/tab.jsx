@@ -81,14 +81,14 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 export default function CustomizedTabs() {
-    const [value, setValue] = React.useState(0);
-
+    const [value, setValue] = React.useState();
+    
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
+    
     const Navigate = useNavigate();
-
+    
     const makeSwitch = (pathName)=>{
         switch(pathName){
             case "/":
