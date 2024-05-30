@@ -89,6 +89,33 @@ export default function CustomizedTabs() {
 
     const Navigate = useNavigate();
 
+    const makeSwitch = (pathName)=>{
+        switch(pathName){
+            case "/":
+                setValue(0)
+                break;
+    
+            case "/about":
+                setValue(1)
+                break;
+            case "/projects":
+                setValue(2)
+                break;
+            case "/contact-me":
+                setValue(3)
+                break;
+            default:
+                setValue();
+                break;
+        }    
+    }
+    
+    React.useEffect(()=>{
+        let pathName=window.location.pathname;
+        makeSwitch(pathName);
+    }, [window.location.pathname])
+    
+    
     return (
         <Box className="navbar-box" >
                 <AntTabs value={value} style={{ border: "none" }} onChange={handleChange} aria-label="ant example" >

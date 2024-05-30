@@ -7,7 +7,6 @@ import {gitData} from "../github";
 const Projects = () => {
   const [UserData, setUsersData] = useState(gitData);
   const [userData, setUserData] = useState(false);
-
   useEffect(() => {
     try{
       if(gitData){

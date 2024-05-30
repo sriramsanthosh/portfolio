@@ -2,14 +2,7 @@
 import SocialAccounts from "../components/social-media";
 
 const Home = () => {
-
-
-    // const handleimg = () => {
-    //     let dp = document.querySelector(".profile");
-    //     dp.style.visibility = "visible";
-    //     dp.style.marginTop = "0";
-    // }
-
+    
     return (
         <div style={{position:"relative"}}>
             <div className="my-top-name-container" style={{ width: "100%" }}>

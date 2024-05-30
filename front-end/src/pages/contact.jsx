@@ -1,9 +1,10 @@
 import Button from '@mui/material/Button';
 import { LoadingButton } from '@mui/lab';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Axios from "axios";
 import AlertMUI from '../components/MUI/alert';
 const Contact = () => {
+
 
     const [submit, setsubmit] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -20,7 +21,7 @@ const Contact = () => {
             mobile:e.target.mobile.value,
             message: e.target.message.value
         }
-        await Axios.post("https://cheerful-red-cormorant.cyclic.app/send-mail", data).then((res)=>{
+        await Axios.post(`${process.env.REACT_APP_SERVER}/send-mail`, data).then((res)=>{
             console.log(res.data);
             let contactForm = document.getElementById("contact-form");
             setSuccess(true);

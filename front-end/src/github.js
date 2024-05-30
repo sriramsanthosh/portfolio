@@ -4,7 +4,7 @@ let gitData = null;
 
 if (!gitData) {
     try {
-        await Axios.post("https://cheerful-red-cormorant.cyclic.app/").then(async (res) => {
+        await Axios.post(`${process.env.REACT_APP_SERVER}`).then(async (res) => {
             gitData = await res.data.UserData;
         }).catch((err) => {
             console.error('Connection Error!')
