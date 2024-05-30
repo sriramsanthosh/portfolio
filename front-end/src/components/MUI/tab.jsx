@@ -81,7 +81,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 export default function CustomizedTabs() {
-    const [value, setValue] = React.useState();
+    const [value, setValue] = React.useState(1);
     
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -92,17 +92,17 @@ export default function CustomizedTabs() {
     const makeSwitch = (pathName)=>{
         switch(pathName){
             case "/":
-                setValue(0)
+                setValue(0);
                 break;
     
             case "/about":
-                setValue(1)
+                setValue(1);
                 break;
             case "/projects":
-                setValue(2)
+                setValue(2);
                 break;
             case "/contact-me":
-                setValue(3)
+                setValue(3);
                 break;
             default:
                 setValue();
@@ -118,7 +118,7 @@ export default function CustomizedTabs() {
     
     return (
         <Box className="navbar-box" >
-                <AntTabs value={value} style={{ border: "none" }} onChange={handleChange} aria-label="ant example" >
+                <AntTabs value={value} style={{ border: "none" }} aria-label="ant example" >
                     <AntTab className="antTab" onClick={(e) => { e.preventDefault(); Navigate("/") }} label="Home" style={antTabStyle} />
                     <AntTab className="antTab about-tab" onClick={(e) => { e.preventDefault(); Navigate("/about") }} label="About" style={antTabStyle} />
                     <AntTab className="antTab projects-tab" onClick={(e) => { e.preventDefault(); Navigate("/projects") }} label="Projects" style={antTabStyle} />
@@ -132,4 +132,3 @@ const antTabStyle = {
     color: "brickcrimson",
     fontWeight: "bolder",
 }
-

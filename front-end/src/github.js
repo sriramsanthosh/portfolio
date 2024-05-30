@@ -7,7 +7,7 @@ if (!gitData) {
         await Axios.post(`${process.env.REACT_APP_SERVER}`).then(async (res) => {
             gitData = await res.data.UserData;
         }).catch((err) => {
-            console.error('Connection Error!')
+            console.error('Connection Error!');
         });
     }
     catch (err) {
