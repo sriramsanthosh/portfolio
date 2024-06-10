@@ -4,9 +4,11 @@ import Button from '@mui/material/Button';
 import CircularIndeterminate from "../components/MUI/circular-loader";
 import { gitData } from "../github";
 
+
 const Projects = () => {
   const [UserData, setUsersData] = useState(gitData);
   const [userData, setUserData] = useState(false);
+
   useEffect(() => {
     try {
       if (gitData) {
@@ -54,14 +56,14 @@ const Projects = () => {
       <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap', justifyContent: 'center', margin: "20px auto", marginBottom: "0" }}>
         {projectsData.map((project, index) => {
           return (
-
-            <div key={index} className="github-card" style={{ position: "relative", border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", width: "350px", margin: "20px auto", marginTop: "40px" }}>
+            
+            <div key={index} className="github-card" style={{ position: "relative", alignContent:"center", border: "2px solid #2A2A2B", borderRadius: "5px", padding: "10px 10px", width: "350px", margin: "20px auto", marginTop: "40px", overflowWrap:"break-word" }}>
               <div style={{ display: "flex", justifyContent: "center", width: "100%", alignContent: "space-between" }}>
                 <div style={{ textAlign: 'left', paddingLeft: "20px" }}>
                   {userData && <p style={{ marginTop: "30px", fontWeight: "bold", fontFamily: "sans-serif" }}>{UserData.login}/{project.id}</p>}
                   <p className="ubuntu-regular" style={{ textAlign: "left" }}>{project.description}</p>
-                  <p className="ubuntu-regular"><NavLink to={project.githubLink} target="_blank"><Button variant="outlined" color="success">Repo</Button></NavLink> &nbsp;
-                    <NavLink to={project.websiteLink} target="_blank"><Button variant="outlined" color="error">Deployment</Button></NavLink></p>
+                  <p className="ubuntu-regular"><NavLink to={project.githubLink} target="_blank"><Button variant="outlined" color="success"><i className="fa-brands fa-git-alt"></i> &nbsp; Repo</Button></NavLink> &nbsp;
+                    <NavLink to={project.websiteLink} target="_blank"><Button variant="outlined" color="error"><i className="fa-solid fa-wifi" style={{transform:"rotate(45deg)"}}></i> &nbsp; Demo</Button></NavLink></p>
 
                 </div>
 
@@ -84,6 +86,7 @@ const Projects = () => {
           )
         })}
       </div >
+
     </div>
 
   );
@@ -129,7 +132,7 @@ let projectsData = [
     githubLink: "https://github.com/sriramsanthosh/sriram-foundation",
     websiteLink: "https://sriramsanthosh.github.io/sriram-foundation/",
     photo: "sriram-foundation",
-    description: "This is a front-end website integrated with payment platform that accepts the payments for making donation."
+    description: "A front-end website integrated with payment platform, accepts the payments for making donation."
   }
 ]
 

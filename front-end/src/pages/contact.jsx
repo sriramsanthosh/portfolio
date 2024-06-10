@@ -3,8 +3,8 @@ import { LoadingButton } from '@mui/lab';
 import { useEffect, useState } from 'react';
 import Axios from "axios";
 import AlertMUI from '../components/MUI/alert';
-const Contact = () => {
 
+const Contact = () => {
 
     const [submit, setsubmit] = useState(false);
     const [success, setSuccess] = useState(false);

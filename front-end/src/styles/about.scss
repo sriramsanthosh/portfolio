@@ -1,0 +1,40 @@
+.skill-box{
+    font-size: 60px;
+    border: 1px solid lightgray;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 6px;
+    vertical-align: middle;
+}
+
+.skill-box:hover{
+    transform: scale(1.06);
+    transition: 0.3s ease;
+    border-color: white;
+    color: white;
+}
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.small-plus{
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+
+
+@media screen and (max-width:544px) {
+    .btech-degree-letter-container {
+        display: none;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -6,12 +6,16 @@
 .navbar-back{
   width: 83%;
   background-color: #18181B;
-
 }
 
 .profile{
   /* transition: 0.8s ease-in-out; */
   width : 500px;
+}
+
+img{
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .profile:hover{
