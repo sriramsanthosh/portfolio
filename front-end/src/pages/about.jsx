@@ -44,15 +44,15 @@ const About = () => {
                 <div className="flexbox">
 
 
-                    <div className="skill-box"><i class="fa-solid fa-c"></i><i class="fa-solid fa-plus small-plus"></i><i class="fa-solid fa-plus small-plus"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-js"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-react"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-node"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-envira" style={{ transform: "rotate(45deg)" }}></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-git"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-bootstrap"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-css3-alt"></i></div>
-                    <div className="skill-box"><i class="fa-brands fa-html5"></i></div>
+                    <div className="skill-box"><i className="fa-solid fa-c"></i><i className="fa-solid fa-plus small-plus"></i><i className="fa-solid fa-plus small-plus"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-js"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-react"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-node"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-envira" style={{ transform: "rotate(45deg)" }}></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-git"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-bootstrap"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-css3-alt"></i></div>
+                    <div className="skill-box"><i className="fa-brands fa-html5"></i></div>
 
                 </div>
                 <div className="btech-degree-letter-container" style={{ position: "relative" }}>

@@ -5,6 +5,11 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import {useNavigate } from "react-router-dom";
 
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = process.env.REACT_APP_GTAG;
+ReactGA.initialize(TRACKING_ID);
+
 const AntTabs = styled(Tabs)({
     borderBottom: '1px solid #e8e8e8',
     '& .MuiTabs-indicator': {
@@ -109,10 +114,17 @@ export default function CustomizedTabs() {
                 break;
         }    
     }
-    
+
     React.useEffect(()=>{
         let pathName=window.location.pathname;
         makeSwitch(pathName);
+        try{
+            // console.log(window.location.pathname + window.location.search);
+            ReactGA.pageview(window.location.pathname + window.location.search);
+        }
+        catch(err){
+            console.error("gtag error");
+        }
     }, [window.location.pathname])
     
     

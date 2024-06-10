@@ -5,10 +5,6 @@ import Footer from './components/footer';
 import NavBar from './components/navbar';
 import { Suspense, lazy, useEffect } from 'react';
 import FallingLineSpinner from './components/react-spinners/FallingLines';
-import ReactGA from 'react-ga';
-
-const TRACKING_ID = process.env.REACT_APP_GTAG;
-ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const LazyHome = lazy(()=> import("./pages/home"));
@@ -17,9 +13,6 @@ function App() {
   const LazyContactMe = lazy(()=> import("./pages/contact"));
   const LazyPageNotFound = lazy(()=> import("./pages/Page404"));
 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
 
   return (
     <div>
